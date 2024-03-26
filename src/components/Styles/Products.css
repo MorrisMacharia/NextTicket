@@ -1,0 +1,74 @@
+.body1{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.upComing {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.row1 {
+  display: flex;
+  justify-content: space-around;
+}
+.row2{
+display: flex;
+justify-content: space-around;
+}
+.title1{
+  text-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.card:hover{
+  opacity: 0.3;
+  cursor: grab;
+  color: rgb(121, 10, 2);
+  transform: scale(1.1);
+}
+.title {
+  color: var(--Neutrals-Dark, #040404);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.day{
+font-size: 14px ;
+font-weight: 300;
+}
+.loc{
+  font-size: 14px ;
+  font-weight: 300;
+}
+.price{
+  font-size: 14px ;
+  font-weight: 300;
+}
+.events{
+  font-size:25px ;
+  font-weight: 700;
+}
+.bttn{
+  width: 270px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  cursor: grab;
+
+  }
+  .more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+

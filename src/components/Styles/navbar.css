@@ -1,0 +1,72 @@
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+.wordings {
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+.intro {
+  text-align: center;
+}
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+  gap: 10px;
+}
+.searchbar input {
+  display: flex;
+  width: 400px;
+  height: 40px;
+  background: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.intro {
+  color: var(--Neutrals-Dark, #040404);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "DM Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -0.8px;
+}
+.btn {
+  border-radius: 9px;
+  color: aliceblue;
+  background-color: #040404;
+  width: 90px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #0781e6;
+  color: aqua;
+  cursor: gran;
+  transform: scale(1.1);
+}
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: #040404;
+}
+.create{
+text-align: center;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #040404;
+}
