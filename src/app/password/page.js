@@ -1,5 +1,5 @@
 import React from "react";
-import "./password.css";
+import "../../components/Styles/password.css";
 const Password = () => {
   return (
     <div className="container3">
@@ -11,10 +11,12 @@ const Password = () => {
           <button className="btn">X</button>
         </div>
       </div>
-      <div className="create"> Create your password</div>
-      <div className="pass">
-        <div>create a password</div>
-        <input type="Password" placeholder="Password" className="password" />
+      <div className="body">
+        <div className="create"> Create your password</div>
+        <div className="pass">
+          <div>create a password</div>
+          <input type="Password" placeholder="Password " className="password" />
+        </div>
       </div>
     </div>
   );

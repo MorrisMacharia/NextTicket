@@ -1,9 +1,8 @@
 import React from "react";
-import "./Event.css";
+import "../../components/Styles/Event.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
-import { GrFavorite } from "react-icons/gr";
-
+import { MdFavoriteBorder } from "react-icons/md";
 import { CiShare2 } from "react-icons/ci";
 
 const Event = () => {
@@ -36,7 +35,7 @@ const Event = () => {
               <div className="head1">
                 <div>Passionate Pages Flavoured by Manyatta Cider</div>
                 <div>
-                  <GrFavorite />
+                  <CiShare2 />
                   <CiShare2 />
                 </div>
               </div>
@@ -46,20 +45,6 @@ const Event = () => {
                 <div>New Muthaiga Mall, Thigiri Ridge</div>
               </div>
             </div>
-
-<div className="tickdet">
-<div>
-Tickets
-</div>
-<div className="det2">
-  <div className="tiktype">
-<div>Early Bird Ticket</div>
-<div></div>
-  </div>
-
-</div>
-</div>
-
           </div>
         </div>
       </div>
