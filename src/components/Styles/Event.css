@@ -1,13 +1,4 @@
-/* .container11{
+.container11{
     display: flex;
-    background-color: aqua;
-    justify-content: space-around;
-    align-content: center;
-
+    flex-direction: column;
 }
-.btn11{
-    height: 20px;
-}
-.cityinput11{
-    width: 200px;
-} */

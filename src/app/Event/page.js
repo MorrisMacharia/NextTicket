@@ -2,8 +2,10 @@ import React from "react";
 import "../../components/Styles/Event.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
-import { MdFavoriteBorder } from "react-icons/md";
+import { GrFavorite } from "react-icons/gr";
 import { CiShare2 } from "react-icons/ci";
+import Footer from "@/components/Footer/footer";
+import Row2 from "@/components/Row2/row2"
 
 const Event = () => {
   return (
@@ -35,7 +37,7 @@ const Event = () => {
               <div className="head1">
                 <div>Passionate Pages Flavoured by Manyatta Cider</div>
                 <div>
-                  <CiShare2 />
+                  <GrFavorite />
                   <CiShare2 />
                 </div>
               </div>
@@ -48,7 +50,10 @@ const Event = () => {
           </div>
         </div>
       </div>
-    </div>
+      <Row2 />
+<Footer />
+      </div>
+
   );
 };
 
