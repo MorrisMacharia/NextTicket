@@ -1,5 +1,6 @@
 import React from "react";
 import '../Styles/Products.css'
+import Link from "next/link";
 
 const Products = () => {
   return (
@@ -11,6 +12,8 @@ const Products = () => {
         </div>
       </div>
       <div className="row1">
+<Link href='/Event'>
+
         <div className="card">
           <div className="choral">
             <img src="/Event1.png" alt="choral" />
@@ -20,6 +23,8 @@ const Products = () => {
           <div className="loc">The Dome, ASK Showground</div>
           <div className="price">From KES 500</div>
         </div>
+</Link>
+
         <div className="card">
           <div className="choral">
             <img src="/Event2.png" alt="color" />
@@ -51,6 +56,8 @@ const Products = () => {
         </div>
       </div>
       <div className="row2">
+       
+        
         <div className="card">
           <div className="choral">
             <img src="/Event5.svg" alt="soul" />
@@ -60,6 +67,7 @@ const Products = () => {
           <div className="loc">Carnivore Restuarant - Simba Saloon</div>
           <div className="price">From KES 1,500</div>
         </div>
+        
         <div className="card">
           <div className="choral">
             <img src="/Event6.svg" alt="cider" />

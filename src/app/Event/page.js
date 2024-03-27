@@ -1,10 +1,11 @@
 import React from "react";
-import "./Event.css";
+import "../../components/Styles/Event.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
-
 import { CiShare2 } from "react-icons/ci";
+import Footer from "@/components/Footer/footer";
+import Row2 from "@/components/Row2/row2"
 
 const Event = () => {
   return (
@@ -46,24 +47,13 @@ const Event = () => {
                 <div>New Muthaiga Mall, Thigiri Ridge</div>
               </div>
             </div>
-
-<div className="tickdet">
-<div>
-Tickets
-</div>
-<div className="det2">
-  <div className="tiktype">
-<div>Early Bird Ticket</div>
-<div></div>
-  </div>
-
-</div>
-</div>
-
           </div>
         </div>
       </div>
-    </div>
+      <Row2 />
+<Footer />
+      </div>
+
   );
 };
 
