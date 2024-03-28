@@ -47,19 +47,15 @@ const Event = () => {
               </div>
             </div>
 
-<div className="tickdet">
-<div>
-Tickets
-</div>
-<div className="det2">
-  <div className="tiktype">
-<div>Early Bird Ticket</div>
-<div></div>
-  </div>
-
-</div>
-</div>
-
+            <div className="tickdet">
+              <div>Tickets</div>
+              <div className="det2">
+                <div className="tiktype">
+                  <div>Early Bird Ticket</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
