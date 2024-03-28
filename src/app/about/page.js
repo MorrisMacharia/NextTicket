@@ -19,7 +19,7 @@ const Page = () => {
         <div className="wave">Welcome to TicketWave</div>
         <div className="bttns1">
           <div className="enter">
-            <div>Enter your Email</div>
+            <div>Enter your Email Now</div>
             <input type="email" placeholder="Email" className="email1" />
           </div>
 
