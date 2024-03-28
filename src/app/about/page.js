@@ -23,8 +23,8 @@ const Page = () => {
             <input type="email" placeholder="Email" className="email1" />
           </div>
           
-1            <button type="button" className="btn3">
-            <Link href="/Password" target="blank"> Continue
+            <button type="button" className="btn3">
+            <Link href="/password" target="blank"> Continue
             </Link>
 
             </button>
