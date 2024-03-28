@@ -24,7 +24,7 @@ const Page = () => {
           </div>
           
             <button type="button" className="btn3">
-            <Link href="/password" target="blank"> Continue
+            <Link href="/password" > Continue
             </Link>
 
             </button>
