@@ -22,17 +22,20 @@ const Page = () => {
             <div>Enter your Email</div>
             <input type="email" placeholder="Email" className="email1" />
           </div>
-          <Link href="/Password" target="blank">
-            <button type="button" className="btn3">
-              Continue
-            </button>
-          </Link>
+          
+1            <button type="button" className="btn3">
+            <Link href="/Password" target="blank"> Continue
+            </Link>
 
-          <Link href="/Event">
-            <button type="button" className="btn4">
-              <FcGoogle /> Continue with Google
             </button>
-          </Link>
+
+          <button type="button" className="btn4">
+            <FcGoogle /> 
+         <Link href='/event'>
+            
+            Continue with Google
+         </Link>
+          </button>
           <button type="button" className="btn4">
             <FaApple /> Continue with Apple
           </button>
