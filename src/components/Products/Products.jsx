@@ -12,18 +12,17 @@ const Products = () => {
         </div>
       </div>
       <div className="row1">
-<Link href='/Event'>
-
-        <div className="card">
-          <div className="choral">
-            <img src="/Event1.png" alt="choral" />
+        <Link href="/event">
+          <div className="card">
+            <div className="choral">
+              <img src="/Event1.png" alt="choral" />
+            </div>
+            <div className="title">Nairobi International Choral Festival</div>
+            <div className="day">Sun, Apr 28</div>
+            <div className="loc">The Dome, ASK Showground</div>
+            <div className="price">From KES 500</div>
           </div>
-          <div className="title">Nairobi International Choral Festival</div>
-          <div className="day">Sun, Apr 28</div>
-          <div className="loc">The Dome, ASK Showground</div>
-          <div className="price">From KES 500</div>
-        </div>
-</Link>
+        </Link>
 
         <div className="card">
           <div className="choral">
@@ -56,8 +55,6 @@ const Products = () => {
         </div>
       </div>
       <div className="row2">
-       
-        
         <div className="card">
           <div className="choral">
             <img src="/Event5.svg" alt="soul" />
@@ -67,7 +64,7 @@ const Products = () => {
           <div className="loc">Carnivore Restuarant - Simba Saloon</div>
           <div className="price">From KES 1,500</div>
         </div>
-        
+
         <div className="card">
           <div className="choral">
             <img src="/Event6.svg" alt="cider" />
@@ -93,7 +90,9 @@ const Products = () => {
           <div className="choral">
             <img src="/Event8.svg" alt="kiota" />
           </div>
-          <div className="title2">Kiota School Family Outdoor Movie Matinee</div>
+          <div className="title2">
+            Kiota School Family Outdoor Movie Matinee
+          </div>
           <div className="day">Sun, Apr 28</div>
           <div className="loc">The Dome, ASK Showground</div>
           <div className="price">From KES 500</div>
