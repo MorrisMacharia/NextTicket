@@ -1,6 +1,7 @@
 import React from "react";
 import "../../components/Styles/review.css";
 import { FaCreditCard } from "react-icons/fa";
+import Morecontactinfo from "../morecontactinfo/page";
 import Footer from "@/components/Footer/footer";
 
 const Review = () => {
@@ -38,11 +39,19 @@ const Review = () => {
             to complete your purchase.
           </div>
           <div className="purchase"> Payment number</div>
-          <div >
-            <input type="tel" id="phone" className="phone" placeholder="+254  . Phone number" />
+          <div>
+            <input
+              type="tel"
+              id="phone"
+              className="phone"
+              placeholder="+254  . Phone number"
+            />
           </div>
-          <button type="button" className="place">Place Order</button>
+          <button type="button" className="place">
+            Place Order
+          </button>
         </div>
+        <Morecontactinfo />
       </div>
 
       <Footer />

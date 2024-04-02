@@ -5,6 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { CiShare2 } from "react-icons/ci";
 import { FaRegCircle } from "react-icons/fa";
+import Link from "next/link";
 
 import Footer from "@/components/Footer/footer";
 import Row2 from "@/components/Row2/row2";
@@ -263,7 +264,7 @@ const Event = () => {
             <div className="checkout">
               <div className="total">Total: KES 1,000</div>
               <button type="button" className="check">
-                Proceed to checkout
+                <Link href="/contactinfo">Proceed to checkout</Link>
               </button>
             </div>
 
@@ -271,12 +272,12 @@ const Event = () => {
               <div className="org">Organised by</div>
               <div className="exp">
                 <div className="bott1">
-                  <div className="circle">
-                    {/* <FaRegCircle /> */}
-                  </div>
+                  <div className="circle">{/* <FaRegCircle /> */}</div>
                   <div className="momnt">EXP Momentum LTD</div>
                 </div>
-                <button type="button" className="follow">Follow</button>
+                <button type="button" className="follow">
+                  Follow
+                </button>
               </div>
             </div>
           </div>
