@@ -2,6 +2,8 @@ import React from "react";
 import "../../components/Styles/contactinfo.css";
 import Footer from "@/components/Footer/footer";
 import Morecontactinfo from "../morecontactinfo/page";
+import Link from "next/link";
+
 const Contactinfo = () => {
   return (
     <div className="container6">
@@ -34,7 +36,11 @@ const Contactinfo = () => {
             <div className="mobilenumber">mobile number</div>
             <input type="number" placeholder=" +254 phone number" />
           </div>
-          <button className="paybtn"> continue to payment</button>
+          <button className="paybtn">
+            <Link href="/Review">
+            continue to payment
+            </Link>
+             </button>
         </div>
         <div className="div2">
           <Morecontactinfo />

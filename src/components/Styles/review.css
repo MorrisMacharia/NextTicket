@@ -1,0 +1,73 @@
+.review {
+  display: flex;
+  flex-direction: column;
+}
+
+.headred {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 140px;
+}
+.pay {
+  display: flex;
+  gap: 10px;
+  color: "#040404";
+  font: size 10px;
+  font-family: "DM Sans";
+  font-weight: "400";
+  word-wrap: "break-word";
+}
+.rev2 {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  /* background-color: aqua; */
+  width: 600px;
+  /* height: 20px; */
+}
+.paymethod {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-size: 17px;
+  color: "#040404";
+  font-size: 32;
+  font-family: "DM Sans";
+  font-weight: "500";
+  word-wrap: "break-word";
+  /* background-color: blue; */
+  width: 600px;
+}
+.credit{
+    /* background-color: aqua; */
+    display: flex;
+    gap: 15px;
+    border-style: ridge;
+    border-radius: 5px;
+}
+.place{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 8px;
+     font-size: 16;
+     font-family: 'DM Sans';
+     font-weight: '500';
+     word-wrap: 'break-word';
+     width: 70px;
+}
+.phone{
+    width: 590px;
+}
+.purchase{
+    color: var(--Neutrals-Secondary-Text, #666);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: "DM Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 144%;
+}
+.rev1{
+    display: flex;
+    justify-content: space-around;
+}

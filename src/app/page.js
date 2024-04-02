@@ -12,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Products />
       <Footer />
+      {/* <Review /> */}
       {/* <Signup /> */}
       {/* <Emailsignup /> */}
       {/* <Contactinfo /> */}
