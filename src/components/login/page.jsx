@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Styles/login.css"
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import Password from "../Password/password";
+import Password from "../Password/Password";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
