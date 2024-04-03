@@ -24,7 +24,7 @@ const Page = () => {
           </div>
 
           <button type="button" className="btn3">
-            <Link href="/signup">Continue</Link>
+            <Link href="/signup" className="as">Continue</Link>
           </button>
 
           <button type="button" className="btn4">
@@ -35,7 +35,7 @@ const Page = () => {
             <FaApple /> Continue with Apple
           </button>
           <div className="sgn">
-            <Link href="/emailsignup">Log in</Link>
+            <Link href="/emailsignup" >Log in</Link>
           </div>
         </div>
       </div>

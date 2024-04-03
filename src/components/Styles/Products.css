@@ -3,7 +3,10 @@
   flex-direction: column;
   gap: 50px;
 }
-
+.as1{
+  text-decoration: none;
+  color: black;
+}
 .upComing {
   display: flex;
   justify-content: space-between;

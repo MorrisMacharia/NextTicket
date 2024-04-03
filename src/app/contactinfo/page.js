@@ -34,10 +34,10 @@ const Contactinfo = () => {
           </div>
           <div className="mobile-number">
             <div className="mobilenumber">mobile number</div>
-            <input type="number" placeholder=" +254 phone number" />
+            <input type="tel" placeholder=" +254 phone number" />
           </div>
           <button className="paybtn">
-            <Link href="/Review">
+            <Link href="/Review" className="as">
             continue to payment
             </Link>
              </button>

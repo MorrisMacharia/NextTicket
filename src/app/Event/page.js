@@ -264,7 +264,7 @@ const Event = () => {
             <div className="checkout">
               <div className="total">Total: KES 1,000</div>
               <button type="button" className="check">
-                <Link href="/contactinfo">Proceed to checkout</Link>
+                <Link href="/contactinfo" className="as">Proceed to checkout</Link>
               </button>
             </div>
 

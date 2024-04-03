@@ -1,10 +1,9 @@
 import Navbar from "@/components/Navbar/page";
 import Products from "@/components/Products/Products";
 import Footer from "@/components/Footer/footer";
-import Contactinfo from "./contactinfo/page";
 import Morecontactinfo from "./morecontactinfo/page";
-// import Signup from "./signup/page";
-// import Emailsignup from "./emailsignup/page";
+// import Authenticate from "./authenticate/page";
+
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       <Navbar />
       <Products />
       <Footer />
+      {/* <Authenticate /> */}
       {/* <Review /> */}
       {/* <Signup /> */}
       {/* <Emailsignup /> */}

@@ -8,6 +8,10 @@
   border-radius: 8px;
   background: var(--Neutrals-Dark, #040404);
 }
+.btn:hover{
+  background-color: rgb(9, 235, 205);
+  
+}
 .evt1 {
   display: flex;
   padding: 24px 120px;
@@ -147,6 +151,10 @@
   align-self: stretch;
   border-radius: 12px;
   background: var(--Neutrals-Dark, #040404);
+}
+.check:hover{
+  background-color: rgb(9, 235, 205);
+  
 }
 .bott {
   display: flex;
