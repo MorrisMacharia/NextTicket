@@ -16,7 +16,7 @@ export default function Home() {
       {/* <Signup /> */}
       {/* <Emailsignup /> */}
       {/* <Contactinfo /> */}
-      <Morecontactinfo />
+      {/* <Morecontactinfo /> */}
     </div>
   );
 }
