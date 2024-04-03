@@ -11,12 +11,13 @@ export default function Home() {
       <Navbar />
       <Products />
       <Footer />
-      {/* <Authenticate /> */}
       {/* <Review /> */}
       {/* <Signup /> */}
       {/* <Emailsignup /> */}
       {/* <Contactinfo /> */}
       {/* <Morecontactinfo /> */}
+
+      {/* <Authenticate /> */}
     </div>
   );
 }
