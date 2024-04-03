@@ -1,6 +1,5 @@
 import React from "react";
 import "../../components/Styles/emailsignup.css";
-
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
 import Link from "next/link";
@@ -23,11 +22,7 @@ const Emailsignup = () => {
           <input type="email" placeholder="Email " />
           <div className="e-add">Your password</div>
           <input type="password" placeholder="password " />
-          <button className="button3">
-            <Link href="/authenticate">
-            Sign in
-            </Link>
-            </button>
+          <button className="button3">Sign in</button>
         </div>
         <div className="pass4">
           <div className="send">Send a code via email instead</div>
