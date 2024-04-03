@@ -1,5 +1,7 @@
 import React from "react";
 import "../../components/Styles/emailsignup.css";
+import Link from "next/link";
+
 const Emailsignup = () => {
   return (
     <div className="container5">
@@ -18,7 +20,11 @@ const Emailsignup = () => {
           <input type="email" placeholder="Email " />
           <div className="e-add">Your password</div>
           <input type="password" placeholder="password " />
-          <button className="button3">Sign in</button>
+          <button className="button3">
+            <Link href="/authenticate">
+            Sign in
+            </Link>
+            </button>
         </div>
       </div>
     </div>

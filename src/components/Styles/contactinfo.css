@@ -43,6 +43,13 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
+.as{
+  text-decoration: none;
+  color: white;
+}
+.as:hover{
+  color: rgb(138, 85, 5);
+}
 .paybtn{
     padding:  15px 10px;
     margin-top: 20px;
@@ -50,6 +57,10 @@
     background-color: black;
     color: aliceblue;
     cursor: grab;
+}
+.paybtn:hover{
+  background-color: rgb(9, 235, 205);
+  
 }
 .foooter{
     margin-top: 25vh;
