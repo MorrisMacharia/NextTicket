@@ -12,7 +12,7 @@ const Products = () => {
         </div>
       </div>
       <div className="row1">
-        <Link href="/event">
+        <Link href="/event" className="as1">
           <div className="card">
             <div className="choral">
               <img src="/Event1.png" alt="choral" />
