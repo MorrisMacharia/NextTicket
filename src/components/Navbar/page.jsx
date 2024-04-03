@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import "../Styles/navbar.css";
@@ -20,7 +20,7 @@ const Navbar = () => {
             <MdLanguage /> English
           </div>
           <button type="button" className="btn">
-            <Link href="/about">Sign in</Link>
+            <Link href="/about" className="as">Sign in</Link>
           </button>
         </div>
       </div>
