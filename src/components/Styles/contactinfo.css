@@ -1,6 +1,7 @@
 .names {
   display: flex;
   gap: 20px;
+  
 }
 .header4 {
   display: flex;
@@ -13,58 +14,56 @@
 .where {
   color: var(--Neutrals-Dark, #040404);
   font-feature-settings: "clig" off, "liga" off;
-  font-family: "DM Sans";
   font-size: 32px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: normal;
   margin-bottom: 10px;
 }
-.names{
-    margin-bottom: 15px;
+.names {
+  margin-bottom: 15px;
 }
-.names input{
-    padding:  15px 10px;
-    margin-top: 10px;
-    width: 300px;
-    border-radius: 10px;
+.names input {
+  padding: 15px 10px;
+  margin-top: 10px;
+  width: 300px;
+  border-radius: 10px;
 }
-.email-address input{
-    padding:  15px 10px;
-    margin-top: 10px;
-    width: 650px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.email-address input {
+  padding: 15px 10px;
+  margin-top: 10px;
+  width: 650px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-.mobile-number input{
-    padding:  15px 10px;
-    margin-top: 10px;
-    width: 300px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.mobile-number input {
+  padding: 15px 10px;
+  margin-top: 10px;
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-.as{
+.as {
   text-decoration: none;
   color: white;
 }
-.as:hover{
+.as:hover {
   color: rgb(138, 85, 5);
 }
-.paybtn{
-    padding:  15px 10px;
-    margin-top: 20px;
-    border-radius: 15px;
-    background-color: black;
-    color: aliceblue;
-    cursor: grab;
+.paybtn {
+  padding: 15px 10px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: black;
+  color: aliceblue;
+  cursor: grab;
 }
-.paybtn:hover{
+.paybtn:hover {
   background-color: rgb(9, 235, 205);
-  
 }
-.foooter{
-    margin-top: 25vh;
+.foooter {
+  margin-top: 25vh;
 }
-.div1-div2{
+.div1-div2 {
   display: flex;
 }
