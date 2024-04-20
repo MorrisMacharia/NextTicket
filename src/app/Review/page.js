@@ -26,6 +26,7 @@ const Review = () => {
               <div className="credit">
                 <input type="radio" /> <FaCreditCard /> Card
               </div>
+              
               <div className="credit">
                 <input type="radio" />
                 <img src="/MPesa.png" alt="mpesa" width={18} height={18} />
@@ -51,7 +52,7 @@ const Review = () => {
             Place Order
           </button>
         </div>
-        <Morecontactinfo />
+        {/* <Morecontactinfo /> */}
       </div>
 
       <Footer />
