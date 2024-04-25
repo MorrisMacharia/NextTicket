@@ -1,11 +1,8 @@
-
-
 import React from "react";
 import "../Styles/navbar.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
-
 const Navbar = () => {
   return (
     <div className="container">
@@ -20,7 +17,9 @@ const Navbar = () => {
             <MdLanguage /> English
           </div>
           <button type="button" className="btn">
-            <Link href="/about" className="as">Sign in</Link>
+            <Link href="/about" className="as">
+              Sign in
+            </Link>
           </button>
         </div>
       </div>
