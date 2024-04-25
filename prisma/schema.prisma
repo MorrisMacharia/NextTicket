@@ -26,9 +26,9 @@ enum UserRole {
 model Event {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String @unique
-  date        DateTime
+  date        String
   location    String
-  price       Float
+  price       String
   description String
   image       String
   createdBy   User     @relation(fields: [createdById], references: [id])
