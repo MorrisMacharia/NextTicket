@@ -3,7 +3,6 @@ import "../Styles/navbar.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
-
 const Navbar = () => {
   return (
     <div className="container">
