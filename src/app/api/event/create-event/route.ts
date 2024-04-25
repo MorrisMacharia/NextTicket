@@ -8,10 +8,12 @@ import { splitToken } from "../../../../helpers/splitToken";
 
 export async function POST(req: NextRequest) {
   try {
-    const rawData = await req.json();
-    const { title, description, date, location, price, image } = rawData;
+    const { title, description, date, location, price, image } =
+      await req.json();
 
-    let token: string | string[] | undefined = req.headers["set-cookie"];
+    console.log(req.headers);
+
+    let token: string | string[] | undefined = req.headers.getSetCookie();
 
     if (Array.isArray(token)) {
       token = token[0];
@@ -105,7 +107,3 @@ export async function POST(req: NextRequest) {
     return new NextResponse(JSON.stringify(err));
   }
 }
-// function splitToken(token: string) {
-//   throw new Error("Function not implemented.");
-// }
-
