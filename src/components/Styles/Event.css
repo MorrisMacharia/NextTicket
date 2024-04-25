@@ -1,14 +1,199 @@
-.container11{
-    display: flex;
-    background-color: aqua;
-    justify-content: space-around;
-    align-content: center;
+.container11 {
+  display: flex;
+  flex-direction: column;
+  height: 100pvh;
+}
+.btn {
+  color: aliceblue;
+  border-radius: 8px;
+  background: var(--Neutrals-Dark, #040404);
+}
+.btn:hover {
+  background-color: rgb(9, 235, 205);
+}
+.evt1 {
+  display: flex;
+  padding: 24px 120px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.logo11 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.searchbar11 {
+  display: flex;
+  width: 400px;
+  padding: 24px;
+  align-items: center;
+  align-self: stretch;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.neutral {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  justify-content: space-around;
+}
+.upper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.head1 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+.head2 {
+  color: var(--Neutrals-Dark, #040404);
+  text-wrap: wrap;
+  font-size: 26px;
 
-    /* height: 70px; */
+  font-weight: 500;
+  line-height: 144%;
+  letter-spacing: -0.64px;
 }
-.btn11{
-    height: 20px;
+.tik {
+  color: var(--Neutrals-Dark, #040404);
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: normal;
 }
-.cityinput11{
-    width: 200px;
+.time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  font-size: 15px;
+}
+.tiktype {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  /* background-color: aqua; */
+  width: 518px;
+  font-size: 12px;
+}
+.tiktype4 {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-self: stretch;
+  /* background-color: aqua; */
+  width: 518px;
+  font-size: 12px;
+}
+.details {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.det2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.bird {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.adm {
+  display: flex;
+  gap: 10px;
+}
+.tiktype2 {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.tickdet {
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  align-self: stretch;
+}
+.checkout {
+  display: flex;
+  flex-direction: column;
+}
+.total {
+  text-align: center;
+  font-size: 12px;
+}
+.check {
+  color: aliceblue;
+  display: flex;
+  height: 35px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 12px;
+  background: var(--Neutrals-Dark, #040404);
+}
+.check:hover {
+  background-color: rgb(9, 235, 205);
+}
+.bott {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bott1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.exp {
+  display: flex;
+  justify-content: space-between;
+}
+.org {
+  color: var(--Neutrals-Dark, #040404);
+  font-size: 15px;
+
+  font-weight: 500;
+  line-height: normal;
+}
+.circle {
+  border-radius: 32px;
+  background: #e7e7e7;
+  width: 34px;
+  height: 34px;
+}
+.momnt {
+  overflow: hidden;
+  color: #5c5c5c;
+  font-feature-settings: "clig" off, "liga" off;
+  text-overflow: ellipsis;
+  font-size: 15px;
+
+  font-weight: 500;
+  line-height: normal;
+}
+.follow {
+  border-radius: 12px;
+  border: 1px solid var(--Neutrals-Dark, #040404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }

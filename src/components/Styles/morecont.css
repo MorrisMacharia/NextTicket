@@ -1,0 +1,37 @@
+.tickets {
+  display: flex;
+  gap: 100px;
+  margin-top: 20px;
+}
+.tickets2 {
+  display: flex;
+  gap: 220px;
+  margin-top: 20px;
+}
+.coupon {
+  margin-top: 10px;
+  color: blue;
+  cursor: pointer;
+}
+.tickets3 {
+  display: flex;
+  gap: 220px;
+  margin-top: 20px;
+}
+.order {
+  color: var(--Neutrals-Dark, #040404);
+  font-size: 24px;
+
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.passion {
+  color: var(--Neutrals-Dark, #040404);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 19px;
+
+  font-weight: 400;
+  margin-bottom: 10px;
+}

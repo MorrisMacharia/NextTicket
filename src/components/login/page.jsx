@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./login.css";
+import "../Styles/login.css"
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import Password from "../Password/password";
+import Password from "../Password/Password";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);

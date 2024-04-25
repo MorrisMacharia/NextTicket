@@ -1,0 +1,37 @@
+.row2 {
+  display: flex;
+  justify-content: space-around;
+}
+.title1 {
+  text-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.title {
+  color: var(--Neutrals-Dark, #040404);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: normal;
+}
+.day {
+  font-size: 14px;
+  font-weight: 300;
+}
+.loc {
+  font-size: 14px;
+  font-weight: 300;
+}
+.price {
+  font-size: 14px;
+  font-weight: 300;
+}
+.events {
+  font-size: 25px;
+  font-weight: 700;
+}
