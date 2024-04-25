@@ -11,8 +11,6 @@ export async function POST(req: NextRequest) {
     const { title, description, date, location, price, image } =
       await req.json();
 
-    console.log(req.headers);
-
     let token: string | string[] | undefined = req.headers.getSetCookie();
 
     if (Array.isArray(token)) {
