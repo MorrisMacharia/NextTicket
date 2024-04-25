@@ -1,6 +1,6 @@
 import React from "react";
 import "./password.css";
-const Password = () => {
+const PasswordPage = () => {
   return (
     <div className="container3">
       <div className="header">
@@ -20,4 +20,4 @@ const Password = () => {
   );
 };
 
-export default Password;
+export default PasswordPage;
