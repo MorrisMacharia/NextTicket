@@ -1,6 +1,6 @@
 import React from "react";
 import "../../components/Styles/contactinfo.css";
-import Footer from "@/components/Footer/footer";
+import Footer from "../../components/Footer/footer";
 import Morecontactinfo from "../morecontactinfo/page";
 import Link from "next/link";
 

@@ -7,8 +7,8 @@ import { CiShare2 } from "react-icons/ci";
 import { FaRegCircle } from "react-icons/fa";
 import Link from "next/link";
 
-import Footer from "@/components/Footer/footer";
-import Row2 from "@/components/Row2/row2";
+import Footer from "../../components/Footer/footer";
+import Row2 from "../../components/Row2/row2";
 
 const Event = () => {
   return (

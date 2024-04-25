@@ -2,7 +2,8 @@ import React from "react";
 import "../../components/Styles/review.css";
 import { FaCreditCard } from "react-icons/fa";
 import Morecontactinfo from "../morecontactinfo/page";
-import Footer from "@/components/Footer/footer";
+import Footer from "../../components/Footer/footer";
+
 
 const Review = () => {
   return (
