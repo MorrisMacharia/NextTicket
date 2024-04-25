@@ -1,5 +1,6 @@
 import React from "react";
 import "../../components/Styles/password.css";
+
 const Password = () => {
   return (
     <div className="container3">
