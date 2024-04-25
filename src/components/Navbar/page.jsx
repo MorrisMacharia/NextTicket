@@ -11,7 +11,9 @@ const Navbar = () => {
           <img src="/Logo.svg" alt="" />
         </div>
         <div className="wordings">
-          <div className="create"> Create Event</div>
+          <Link href="/organisers">
+            <div className="create"> Create Event </div>
+          </Link>
 
           <div className="create">
             <MdLanguage /> English
@@ -25,13 +27,15 @@ const Navbar = () => {
       </div>
       <div className="intro">Find your next experience</div>
 
-      <div className="searchbar">
-        <input
-          type="text"
-          className="cityinput"
-          placeholder="search for events,concerts,organizers and more  "
-        />
-        <IoSearchOutline />
+      <div className="searchWrapper">
+        <div className="searchbar">
+          <input
+            type="text"
+            className="cityinput"
+            placeholder="search for events,concerts,organizers and more  "
+          />
+          <IoSearchOutline />
+        </div>
       </div>
     </div>
   );

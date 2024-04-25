@@ -43,7 +43,7 @@ const Contactinfo = () => {
              </button>
         </div>
         <div className="div2">
-          <Morecontactinfo />
+          {/* <Morecontactinfo /> */}
         </div>
       </div>
       <div className="foooter">

@@ -1,55 +1,79 @@
-.footer {
+/* .footer {
   display: flex;
-  justify-content:space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 40px 10%;
   align-items: center;
-  background-color:rgba(128, 128, 128, 0.151);
-}
+  background-color: rgba(128, 128, 128, 0.151);
+} */
 .information {
   display: flex;
   gap: 100px;
   cursor: pointer;
 }
-.ticket{
-    color: var(--Neutrals-Dark, #040404);
-text-align: center;
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: "DM Sans";
-font-size: 40.304px;
-font-style: normal;
-font-weight: 700;
-line-height: 27.989px; /* 69.444% */
-letter-spacing: -3.224px;
-margin-bottom: 15px;
+
+.footer{
+  display: flex;
+padding: 80px 120px;
+flex-direction: column;
+align-items: center;
+gap: 64px;
+align-self: stretch;
+background-color: rgba(128, 128, 128, 0.151);
 }
-.ticket:hover{
+.all11{
+  display: flex;
+width: 1272px;
+justify-content: space-between;
+align-items: center;
+}
+.ticket {
+  color: var(--Neutrals-Dark, #040404);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 40.304px;
+
+  font-weight: 700;
+  line-height: 27.989px; /* 69.444% */
+  letter-spacing: -3.224px;
+  margin-bottom: 15px;
+}
+.ticket:hover {
   opacity: 0.3;
   cursor: grab;
   color: rgb(8, 2, 90);
   transform: scale(1.1);
 }
-.socials{
-    display: flex;
-    gap: 15px;
+.socials {
+  display: flex;
+  gap: 15px;
 }
-.write{
-    color: var(--Neutrals-Secondary-Text, #666);
+.write {
+  color: var(--Neutrals-Secondary-Text, #666);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+
+  font-weight: 400;
+  line-height: 144%; /* 28.8px */
+  color: #666666;
+}
+h3 {
+  color: var(--Neutrals-Dark, #040404);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: 144%; /* 28.8px */
+  letter-spacing: -0.4px;
+  color: #040404;
+}
+.copyright{
+  color: var(--Neutrals-Secondary-Text, #666);
 font-feature-settings: 'clig' off, 'liga' off;
 font-family: "DM Sans";
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 144%; /* 28.8px */
-color: #666666;
-}
-h3{
-    color: var(--Neutrals-Dark, #040404);
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: "DM Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 144%; /* 28.8px */
-letter-spacing: -0.4px;
-color: #040404;
+line-height: 144%; /* 23.04px */
+text-align: center;
 }

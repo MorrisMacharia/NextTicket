@@ -8,9 +8,8 @@
   border-radius: 8px;
   background: var(--Neutrals-Dark, #040404);
 }
-.btn:hover{
+.btn:hover {
   background-color: rgb(9, 235, 205);
-  
 }
 .evt1 {
   display: flex;
@@ -58,18 +57,16 @@
 .head2 {
   color: var(--Neutrals-Dark, #040404);
   text-wrap: wrap;
-  font-family: "DM Sans";
   font-size: 26px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: 144%;
   letter-spacing: -0.64px;
 }
 .tik {
   color: var(--Neutrals-Dark, #040404);
-  font-family: "DM Sans";
   font-size: 20px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: normal;
 }
@@ -152,9 +149,8 @@
   border-radius: 12px;
   background: var(--Neutrals-Dark, #040404);
 }
-.check:hover{
+.check:hover {
   background-color: rgb(9, 235, 205);
-  
 }
 .bott {
   display: flex;
@@ -172,9 +168,8 @@
 }
 .org {
   color: var(--Neutrals-Dark, #040404);
-  font-family: "DM Sans";
   font-size: 15px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: normal;
 }
@@ -189,9 +184,8 @@
   color: #5c5c5c;
   font-feature-settings: "clig" off, "liga" off;
   text-overflow: ellipsis;
-  font-family: "DM Sans";
   font-size: 15px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: normal;
 }

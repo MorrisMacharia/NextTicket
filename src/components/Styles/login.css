@@ -24,9 +24,8 @@
 .wave {
   color: var(--Neutrals-Dark, #040404);
   font-feature-settings: "clig" off, "liga" off;
-  font-family: "DM Sans";
   font-size: 40px;
-  font-style: normal;
+
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.8px;
