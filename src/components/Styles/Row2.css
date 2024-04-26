@@ -1,4 +1,5 @@
 .row2 {
+  height: auto;
   display: flex;
   justify-content: space-around;
 }
@@ -34,4 +35,16 @@
 .events {
   font-size: 25px;
   font-weight: 700;
+}
+@media screen and (max-width: 768px){
+  .row2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .container11{
+    display: flex;
+    flex-direction: column;
+    gap: 250px;
+  }
 }

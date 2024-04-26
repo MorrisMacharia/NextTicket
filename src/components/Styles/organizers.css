@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  width: auto;
+}
+.orgz{
+  height: 100%;
 }
 .orglogo {
   display: flex;
@@ -13,7 +17,7 @@
 }
 .orgbody {
   display: flex;
-  width: 1192px;
+  width: auto;
   padding: 80px 80px 120px 40px;
   align-items: flex-start;
   gap: 48px;
@@ -48,8 +52,8 @@ gap: 16px;
 }
 .orgdets {
   display: flex;
-  width: 1192px;
-  padding: 80px 80px 120px 40px;
+  width: auto;
+  /* padding: 80px 80px 120px 40px; */
   flex-direction: column;
   align-items: flex-start;
   gap: 48px;
@@ -199,5 +203,47 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+@media screen and (max-width: 768px){
+  .orgbody {
+    height: 100%;
+    /* width: 100%;  */
+    /* padding: 40px 20px 60px 20px;  */
+  }
+  .orgz{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* height: auto; */
+  }
+.head12{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
 
+.content{
+  display: flex;
+  /* flex-direction: row; */
+  width: auto;
+}
+.orgbody{
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+.orgdets{
+  width: auto;
+}
+.sidebar{
+  width: auto;
+}
+.welcome{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+}
 

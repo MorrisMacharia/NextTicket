@@ -46,7 +46,7 @@
   border: none;
   border-radius: 12px;
   color: aliceblue;
-  background-color: #ebebeb;
+  background-color: #b69797;
   width: 90px;
   cursor: pointer;
   transition: all ease-in-out 0.5s;
@@ -86,4 +86,41 @@ input:focus,
 input:not(:placeholder-shown) {
   border: none;
   outline: none;
+}
+@media screen and (max-width: 768px) {
+  .container2{
+    width: auto;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 20px 7%;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .create{
+    font-size: 14px;
+  }
+  .wordings{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 15px;
+    align-items: center;
+  }
+  .intro{
+    font-size: 35px;
+    width: auto;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .events{
+    font-size: 10px;
+  }
+  .see{
+    font-size: 15px;
+  }
+
 }

@@ -20,7 +20,7 @@ const Signup = () => {
           <div className="name2">Last name</div>
           <input type="text" placeholder="Last name " className="password" />
           <button className="button2">
-            <Link href="/password" className="as">continue</Link>
+            <Link href="/passcode" className="as">continue</Link>
           </button>
         </div>
       </div>

@@ -83,7 +83,7 @@ const Organizers = () => {
               </div>
             </div>
             <div className="period">
-              <div class="dropdown">
+              <div className="dropdown">
                 In the last 28 Days
                 <select></select>
               </div>
