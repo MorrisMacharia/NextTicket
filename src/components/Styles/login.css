@@ -8,12 +8,14 @@
   height: 700px;
 }
 .bar {
+  width: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-self: stretch;
 }
 .bars {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,4 +74,27 @@
   gap: 24px;
   /* background-color: aqua; */
   width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .bar{
+    width: auto;
+  }
+  .cancel{
+    display: none;
+  }
+  .wave{
+    text-align: center;
+  }
+  .log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bars{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
