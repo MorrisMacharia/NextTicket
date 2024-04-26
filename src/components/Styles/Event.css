@@ -213,6 +213,13 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
 }
-
+.tiktype{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 }
   

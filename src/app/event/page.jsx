@@ -36,7 +36,7 @@ const Event = () => {
       <div className="dets">
         <div className="neutral">
           <div>
-            <img src="/Event1.png" alt="card" width="500px" height="450px" />
+            <img src="/Event1.png" alt="card"  />
           </div>
           <div className="details">
             <div className="upper">
