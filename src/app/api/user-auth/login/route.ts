@@ -49,9 +49,7 @@ export async function POST(req: NextRequest, res: Response) {
       }
     );
 
-    // Allow cookie session
-
-      // NextResponse.cookie("token", token);
+    delete user.password;
 
     return new NextResponse(
       JSON.stringify({

@@ -1,0 +1,27 @@
+.ticket-counter {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.ticket-button:hover {
+  background-color: #333;
+}
+
+span {
+  overflow: hidden;
+  color: #040404;
+  font-feature-settings: "clig" off, "liga" off;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  font-weight: 500;
+}

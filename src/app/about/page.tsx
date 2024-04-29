@@ -1,10 +1,20 @@
+"use client";
 import React from "react";
 import "../../components/Styles/login.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const handleSignUp = () => {
+    router.push("/signup");
+  };
+
   return (
     <div className="log">
       <div className="bar">
@@ -23,8 +33,8 @@ const Page = () => {
             <input type="email" placeholder="Email" className="email1" />
           </div>
 
-          <button type="button" className="btn3">
-            <Link href="/signup" className="as">Continue</Link>
+          <button type="button" className="btn3" onClick={handleSignUp}>
+            Continue
           </button>
 
           <button type="button" className="btn4">
@@ -35,7 +45,7 @@ const Page = () => {
             <FaApple /> Continue with Apple
           </button>
           <div className="sgn">
-            <Link href="/emailsignup" >Log in</Link>
+            <Link href="/login">Log in</Link>
           </div>
         </div>
       </div>

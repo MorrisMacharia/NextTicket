@@ -3,6 +3,7 @@ import "../Styles/Products.css";
 import Link from "next/link";
 import Image from "next/image";
 import eventData from "./eventsData";
+import EventData from "../../types/event";
 
 const Products = () => {
   return (
@@ -14,8 +15,8 @@ const Products = () => {
         </div>
       </div>
       <div className="row1">
-        {eventData.map((event, index) => (
-          <Link href="/event" className="as1" key={index}>
+        {eventData.map((event: EventData, index) => (
+          <Link href={`/events/${event.id}`} className="as1" key={index}>
             <div className="card">
               <div className="choral">
                 <Image

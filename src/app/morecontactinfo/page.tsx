@@ -1,9 +1,8 @@
 import React from "react";
 import "../../components/Styles/morecont.css";
-import RootLayout from "../layout";
 const Morecontactinfo = () => {
   return (
-    <RootLayout>
+    <>
       <div className="orderpage">
         <div className="eventimage">
           <img src="/Eventimg.png" alt="uuh" />
@@ -28,7 +27,7 @@ const Morecontactinfo = () => {
           <div> KES 2,000.00 </div>
         </div>
       </div>
-    </RootLayout>
+    </>
   );
 };
 
