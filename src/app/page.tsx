@@ -3,16 +3,15 @@ import Products from "../components/Products/Products";
 import Footer from "../components/Footer/footer";
 import Morecontactinfo from "./morecontactinfo/page";
 import Organizers from "./organisers/page";
-// import Authenticate from "./authenticate/page";
-
-
+import EventsLayout from "../layouts/EventsLayout";
+// import Admineventcreate from "../components/admin-eventcreate/page";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <EventsLayout>
       <Products />
-      <Footer />
+
+      {/* <Admineventcreate /> */}
       {/* <Organizers/> */}
       {/* <Review /> */}
       {/* <Signup /> */}
@@ -21,6 +20,6 @@ export default function Home() {
       {/* <Morecontactinfo /> */}
 
       {/* <Authenticate /> */}
-    </>
+    </EventsLayout>
   );
 }

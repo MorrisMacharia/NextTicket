@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "../../components/Styles/organizers.css";
 import { IoChevronDownSharp } from "react-icons/io5";
@@ -9,8 +10,15 @@ import { LuWallet } from "react-icons/lu";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaCaretUp } from "react-icons/fa";
 import Link from "next/link";
+import CustomButton from "../../components/CustomButton";
+import Header from "../../components/Header";
+import { useRouter } from "next/navigation";
 
 const Organizers = () => {
+  const router = useRouter();
+  const handleRoute = () => {
+    router.push("/admin-eventcreate");
+  };
   return (
     <div className="orgz">
       <div className="head12">
@@ -65,11 +73,22 @@ const Organizers = () => {
 
         <div className="orgdets">
           <div className="welcome">
-            <div className="orgname">Welcome, John</div>
+            <Header fontSize="40px" fontWeight={500}>
+              Welcome, John
+            </Header>
+
             <div>
-              <button type="button" className="btncreate">
+              <CustomButton
+                backgroundColor="#040404"
+                color="white"
+                border="none"
+                borderRadius="12px"
+                hoverColor="#F5F5F5"
+                padding="20px 24px"
+                onClick={handleRoute}
+              >
                 + Create Event
-              </button>
+              </CustomButton>
             </div>
           </div>
           <div className="specs">
@@ -89,16 +108,15 @@ const Organizers = () => {
               </div>
             </div>
             <div className="rev11">
-
-            <div className="rev">
-              <div className="rev12">Revenue</div>
-              <div className="rev13">KES 0</div>
-            </div>
-            <div className="perc">
-              <div>
-                <FaCaretUp /> vs previous 28 days
+              <div className="rev">
+                <div className="rev12">Revenue</div>
+                <div className="rev13">KES 0</div>
               </div>
-            </div>
+              <div className="perc">
+                <div>
+                  <FaCaretUp /> vs previous 28 days
+                </div>
+              </div>
             </div>
           </div>
           <div className="gross">

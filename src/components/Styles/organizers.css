@@ -1,11 +1,9 @@
 .head12 {
-  /* background-color: aquamarine; */
-  display: flex;
+  align-self: stretch;
   padding: 24px 80px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
-  width: auto;
 }
 .orgz {
   height: 100%;
@@ -13,13 +11,13 @@
 .orglogo {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 5.52px;
 }
 .orgbody {
   display: flex;
   width: auto;
   padding: 80px 80px 120px 40px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 48px;
 }
 .pamoja {
@@ -59,8 +57,10 @@
   gap: 48px;
 }
 .welcome {
+  width: auto;
   display: flex;
-  justify-content: space-between;
+   justify-content: space-between;
+   gap: 250px;
   align-items: center;
   align-self: stretch;
 }
@@ -244,5 +244,6 @@
     display: flex;
     flex-direction: column;
     width: auto;
+    gap: 10px;
   }
 }

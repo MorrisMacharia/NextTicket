@@ -1,0 +1,64 @@
+.orgz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .orgbody {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    flex: 1;
+    /* Styles for the sidebar */
+  }
+  
+  .orgdets {
+    flex: 2;
+    /* Styles for the organizer details */
+  }
+  
+  .create-event {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  input[type="file"],
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

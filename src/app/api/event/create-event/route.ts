@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
 import config from "../../../../config/config";
-// import { splitToken } from "../../../../helpers/prisma";
 import prisma from "../../../../helpers/prisma";
 import { UserRole } from "@prisma/client";
 import { splitToken } from "../../../../helpers/splitToken";
