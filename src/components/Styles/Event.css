@@ -243,39 +243,16 @@
 }
 @media screen and (max-width: 768px) {
   .container11 {
-    gap: 20px; /* Adjusting the gap for smaller screens */
+    gap: 20px;
   }
 
   .searchbar11 {
-    width: 100%; /* Making the search bar full width on smaller screens */
-    padding: 16px; /* Adjusting padding for smaller screens */
+    width: 100%;
+    padding: 16px;
   }
 
   .tiktype,
   .tiktype4 {
-    width: 100%; /* Making these elements full width on smaller screens */
+    width: 100%;
   }
 }
-/* @media screen and (max-width: 768px) {
-  .logo11 {
-    display: flex;
-    flex-direction: column;
-  }
-  .evt1 {
-    display: flex;
-    flex-direction: column;
-  }
-  .neutral {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .tiktype {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  } */
-
