@@ -4,10 +4,7 @@
   gap: 50px;
   margin: 0 10%;
 }
-/* .as1 {
-  text-decoration: none;
-  color: black;
-} */
+
 
 .upComing {
   display: flex;
@@ -22,10 +19,7 @@
   justify-content: space-between;
   padding: 3% 0;
 }
-/* .row2 {
-  display: flex;
-  justify-content: space-around;
-} */
+
 .title1 {
   text-wrap: wrap;
 }

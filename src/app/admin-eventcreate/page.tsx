@@ -1,44 +1,40 @@
 "use client"
 import { useState } from "react";
-import "../../components/Styles/admin-eventcreate.css"
+import "../../components/Styles/admin-eventcreate.css";
 
 const Admineventcreate = () => {
-
   const [eventName, setEventName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventLocation, setEventLocation] = useState("");
   const [ticketPriceEarlyBird, setTicketPriceEarlyBird] = useState("");
   const [ticketPriceGate, setTicketPriceGate] = useState("");
   const [ticketPriceAdvance, setTicketPriceAdvance] = useState("");
+  const [eventImage, setEventImage] = useState(null); // State for event image
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      const formData = new FormData(); // Create FormData object
+      formData.append("eventName", eventName);
+      formData.append("eventDate", eventDate);
+      formData.append("eventLocation", eventLocation);
+      formData.append("ticketPriceEarlyBird", ticketPriceEarlyBird);
+      formData.append("ticketPriceGate", ticketPriceGate);
+      formData.append("ticketPriceAdvance", ticketPriceAdvance);
+      formData.append("eventImage", eventImage); // Append image to FormData
+
       const response = await fetch("/api/create-event", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          eventName,
-          eventDate,
-          eventLocation,
-          ticketPriceEarlyBird,
-          ticketPriceGate,
-          ticketPriceAdvance,
-        }),
+        body: formData, // Send FormData instead of JSON string
       });
 
       if (response.ok) {
-        // Event created successfully, handle accordingly
         console.log("Event created successfully");
       } else {
-        // Handle error response from server
         console.error("Failed to create event");
       }
     } catch (error) {
-      // Handle network errors
       console.error("Network error:", error.message);
     }
   };
@@ -47,13 +43,21 @@ const Admineventcreate = () => {
     <div className="orgz">
       <div className="head12">{/* Header content */}</div>
       <div className="orgbody">
-        <div className="sidebar">{/* Sidebar content */}</div>
         <div className="orgdets">
-          {/* Organizer details content */}
-          {/* Event creation form */}
           <div className="create-event">
             <form onSubmit={handleSubmit}>
               <h2>Create Event</h2>
+              <div className="form-group">
+                <label htmlFor="eventImage">Event Image:</label>
+                <input
+                  type="file"
+                  id="eventImage"
+                  name="eventImage"
+                  accept="image/*"
+                  onChange={(e) => setEventImage(e.target.files[0])}
+                  required
+                />
+              </div>
               <div className="form-group">
                 <label htmlFor="eventName">Event Name:</label>
                 <input
@@ -134,4 +138,3 @@ const Admineventcreate = () => {
 };
 
 export default Admineventcreate;
-

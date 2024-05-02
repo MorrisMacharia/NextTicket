@@ -5,7 +5,8 @@
   align-content: center;
   justify-content: center;
   gap: 50px;
-  height: 700px;
+  height: 100%;
+  width: 100%;
 }
 .bar {
   width: auto;
@@ -39,7 +40,7 @@
   align-self: stretch;
 }
 .email1 {
-  width: 374px;
+  /* width: 374px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,28 +73,37 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  width: 400px;
 }
-@media screen and (max-width: 768px) {
-  .bar{
-    width: auto;
+@media (max-width: 768px) {
+  
+  .log {
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .cancel{
-    display: none;
+
+  .enter {
+    width: auto; 
+  }
+
+  .email1 {
+    width: auto; 
+  }
+
+  .btn3,
+  .btn4 {
+    width: auto; 
+  }
+
+  .bttns1 {
+    width: auto; 
   }
   .wave{
     text-align: center;
   }
-  .log{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .cancel{
+display: none;
   }
-  .bars{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  
 }

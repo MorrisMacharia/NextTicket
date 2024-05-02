@@ -41,6 +41,9 @@ const Organizers = () => {
         </div>
       </div>
       <div className="orgbody">
+        {/* <div className="hamburger">
+          <Hamburger />
+        </div> */}
         <div className="sidebar">
           <div className="content">
             <div className="sbar">

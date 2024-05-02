@@ -50,3 +50,32 @@
   letter-spacing: -0.64px;
   margin-right: 110px;
 }
+@media (max-width: 768px) {
+  .container4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header2 {
+    padding: 20px; 
+  }
+
+  .pass2 input {
+    width: 90%; 
+  }
+
+  .button2 {
+    width: 90%; 
+  }
+
+  .name2 {
+    margin-right: 0; 
+  }
+
+  .name {
+    margin-right: 0; 
+  }
+  .btn{
+    display: none;
+  }
+}

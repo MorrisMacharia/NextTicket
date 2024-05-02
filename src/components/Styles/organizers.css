@@ -203,11 +203,13 @@
   font-weight: 500;
   line-height: normal;
 }
+.hamburger{
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .orgbody {
     height: 100%;
-    /* width: 100%;  */
-    /* padding: 40px 20px 60px 20px;  */
+    
   }
   .orgz {
     width: auto;

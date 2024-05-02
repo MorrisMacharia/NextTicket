@@ -1,7 +1,14 @@
+"use client";
 import React from "react";
-import "../../components/Styles/password.css";
+import "../../components/Styles/passcode.css";
+import CustomButton from "../../components/CustomButton";
+import { useRouter } from "next/navigation";
 
 const Password = () => {
+  const router = useRouter();
+  const handleRoute = () => {
+    router.push("/login");
+  };
   return (
     <div className="container3">
       <div className="header">
@@ -15,9 +22,22 @@ const Password = () => {
       <div className="body">
         <div className="create"> Create your password</div>
         <div className="pass">
-           <div className="create2">create a password</div>
+          <div className="create2">create a password</div>
           <input type="Password" placeholder="Password " className="password" />
-          <button className="button1"> Create password</button>
+
+          <div>
+            <CustomButton
+              backgroundColor="#040404"
+              color="white"
+              border="none"
+              borderRadius="12px"
+              hoverColor="#F5F5F5"
+              padding="20px 24px"
+              onClick={handleRoute}
+            >
+              Create Password
+            </CustomButton>
+          </div>
         </div>
       </div>
     </div>
