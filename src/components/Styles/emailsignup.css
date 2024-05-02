@@ -37,6 +37,7 @@ form {
   text-align: center;
 }
 .pass3 {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,4 +116,50 @@ form {
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .container5 {
+    padding: 0 20px; 
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .header3{
+    justify-content: center;
+  }
+  form {
+    max-width: 90%; 
+  }
+.btn{
+  display: none;
+}
+.googlebtn{
+  width: auto;
+}
+.applebtn{
+  width: auto;
+}
+.signupbtn{
+  width: auto;
+}
+.button3{
+  width: auto;
+}
+  .pass3 input {
+    width: calc(100% - 20px); 
+
+  
+  .googlebtn,
+  .applebtn,
+  .signupbtn {
+    width: 90%; 
+  }
+
+  .e-add {
+    margin-right: 0; 
+    text-align: center;
+  }
+}
 }

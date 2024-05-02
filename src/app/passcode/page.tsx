@@ -22,8 +22,8 @@ const Password = () => {
       <div className="body">
         <div className="create"> Create your password</div>
         <div className="pass">
-          <div className="create2">create a password</div>
-          <input type="Password" placeholder="Password " className="password" />
+          <div className="create2">Create a password</div>
+          <input type="Password" placeholder="Password " className="passcode1" />
 
           <div>
             <CustomButton

@@ -106,6 +106,7 @@ const Emailsignup = () => {
           <div className={passwordError ? "form-error" : "e-add"}>
             {passwordError ? "Password is required" : "Your password"}
           </div>
+
           <button className="button3" type="submit">
             Sign in
           </button>
