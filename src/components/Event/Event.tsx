@@ -6,12 +6,13 @@ import { IoSearchOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 
 import { CiShare2 } from "react-icons/ci";
+import Image from "next/image";
 
 const Event = () => {
   return (
     <div className="container11">
       <div className="logo">
-        <img src="/Logo.svg" alt="" />
+        <Image src="/Logo.svg" alt="" />
       </div>
       <div className="searchbar11">
         <input type="text" className="cityinput11" />
@@ -30,7 +31,7 @@ const Event = () => {
       <div className="dets">
         <div className="neutral">
           <div>
-            <img src="/Event1.png" alt="card" />
+            <Image src="/Event1.png" alt="card" />
           </div>
           <div className="details">
             <div className="upper">

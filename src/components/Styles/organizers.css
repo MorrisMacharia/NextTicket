@@ -17,7 +17,6 @@
   display: flex;
   width: auto;
   padding: 80px 80px 120px 40px;
-  /* align-items: flex-start; */
   gap: 48px;
 }
 .pamoja {
@@ -51,7 +50,6 @@
 .orgdets {
   display: flex;
   width: auto;
-  /* padding: 80px 80px 120px 40px; */
   flex-direction: column;
   align-items: flex-start;
   gap: 48px;
@@ -227,11 +225,9 @@
 
   .content {
     display: flex;
-    /* flex-direction: row; */
     width: auto;
   }
   .orgbody {
-    /* height: auto; */
     display: flex;
     flex-direction: column;
     width: auto;
@@ -241,6 +237,7 @@
   }
   .sidebar {
     width: auto;
+    display: none;
   }
   .welcome {
     display: flex;

@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Page = () => {
   const router = useRouter();
@@ -19,7 +20,9 @@ const Page = () => {
     <div className="log">
       <div className="bar">
         <div className="logo">
-          <img src="/Logo.svg" alt="logo" />
+
+          <Image  src="/Logo.svg" alt="logo" /> 
+          
         </div>
         <div className="cancel">
           <button>X</button>

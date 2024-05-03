@@ -1,7 +1,6 @@
 .review {
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
 }
 
 .headred {
@@ -21,9 +20,7 @@
   display: flex;
   flex-direction: column;
   gap: 17px;
-  /* background-color: aqua; */
-  width: 600px;
-  /* height: 20px; */
+  /* width: 100%; */
 }
 .paymethod {
   display: flex;
@@ -34,11 +31,9 @@
   font-size: 32;
   font-weight: "500";
   word-wrap: "break-word";
-  /* background-color: blue; */
-  width: 600px;
+  /* width: 100%; */
 }
 .credit {
-  /* background-color: aqua; */
   display: flex;
   gap: 15px;
   border-style: ridge;
@@ -56,10 +51,10 @@
 
   font-weight: "500";
   word-wrap: "break-word";
-  width: 70px;
+  width: 200px;
 }
 .phone {
-  width: 580px;
+  /* width: 100%; */
   padding: 15px 10px;
   margin-top: 10px;
   border-radius: 10px;
@@ -76,5 +71,33 @@
 .rev1 {
   display: flex;
   justify-content: space-around;
-  /* background-color: blue; */
+}
+@media screen and (max-width: 768px) {
+  .headred {
+    padding: 40px 10%;
+  }
+.paymethod{
+  width: auto;
+}
+.infor{
+  width: auto;
+}
+.phone{
+  width: 100%;
+}
+  .rev2,
+  .paymethod {
+    width: 100%;
+    /* max-width: 600px; */
+
+    margin: 0 auto;
+
+    .credit,
+    .phone {
+      width: 100%;
+      /* max-width: 580px; */
+
+      margin: 0 auto;
+    }
+  }
 }

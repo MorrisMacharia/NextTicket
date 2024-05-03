@@ -3,12 +3,13 @@ import "../Styles/navbar.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
+import Image from "next/image";
 const Navbar = () => {
   return (
     <div className="container">
       <div className="container2">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
         <div className="wordings">
           <Link href="/organisers">

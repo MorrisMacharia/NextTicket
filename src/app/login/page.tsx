@@ -6,6 +6,7 @@ import { BsApple } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 const Emailsignup = () => {
   const router = useRouter();
@@ -14,6 +15,9 @@ const Emailsignup = () => {
     email: "",
     password: "",
   });
+  const handleRoute = () => {
+    router.push("/signup");
+  };
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
@@ -79,7 +83,7 @@ const Emailsignup = () => {
     <div className="container5">
       <div className="header3">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
         <button className="btn">X</button>
       </div>
@@ -103,12 +107,12 @@ const Emailsignup = () => {
             value={formData.password}
             onChange={handleInputChange}
           />
-          <div className={passwordError ? "form-error" : "e-add"}>
+          {/* <div className={passwordError ? "form-error" : "e-add"}>
             {passwordError ? "Password is required" : "Your password"}
-          </div>
+          </div> */}
 
           <button className="button3" type="submit">
-            Sign in
+            Log In
           </button>
         </div>
         <div className="pass4">
@@ -134,9 +138,12 @@ const Emailsignup = () => {
               Continue with apple
             </Link>
           </button>
-          <button className="signupbtn"> Sign up</button>
         </div>
       </form>
+      <button className="signupbtn" onClick={handleRoute}>
+        {" "}
+        Sign up
+      </button>
     </div>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
 import "../../components/Styles/morecont.css";
+import Image from "next/image";
 const Morecontactinfo = () => {
   return (
     <>
       <div className="orderpage">
         <div className="eventimage">
-          <img src="/Eventimg.png" alt="uuh" />
+          <Image src="/Eventimg.png" alt="uuh" />
         </div>
         <div className="order"> Your order</div>
         <div className="passion">

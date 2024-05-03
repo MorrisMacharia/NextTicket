@@ -2,6 +2,7 @@ import React from "react";
 import "../../components/Styles/Row2.css";
 import EventData from "../../types/event";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface Row2Props {
   data: EventData[];
@@ -22,7 +23,7 @@ const Row2: React.FC<Row2Props> = ({ data }) => {
             onClick={() => handleRoute(event.id)}
           >
             <div className="choral">
-              <img src={event.imageSrc} alt="soul" />
+              <Image src={event.imageSrc} alt="soul" />
             </div>
             <div className="title">{event.title}</div>
             <div className="day">{event.date}</div>

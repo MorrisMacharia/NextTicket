@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import { BsChevronRight } from "react-icons/bs";
 
@@ -9,7 +10,7 @@ Events <BsChevronRight/> EXP Momentum LTD <BsChevronRight/>Passionate Pages Flav
 </div>
 <div className='details'>
 <div className='card1'>
-<img src='/Event7.svg' alt='card1'/>
+<Image src='/Event7.svg' alt='card1'/>
 </div>
 <div className='details1'>
 <div className='postn1'>

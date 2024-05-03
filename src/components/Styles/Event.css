@@ -4,6 +4,7 @@
   flex-direction: column;
   height: auto;
   gap: 50px;
+  margin: 4% 0;
 }
 .btn {
   display: flex;

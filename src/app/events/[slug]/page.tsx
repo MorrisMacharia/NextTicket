@@ -1,17 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import "../../../components/Styles/Event.css";
-import { MdLanguage } from "react-icons/md";
-import { IoSearchOutline } from "react-icons/io5";
 import { GrFavorite } from "react-icons/gr";
 import { CiShare2 } from "react-icons/ci";
-import Footer from "../../../components/Footer/footer";
 import Row2 from "../../../components/Row2/row2";
 import eventData from "../../../components/Products/eventsData";
 import EventData from "../../../types/event";
 import { useRouter } from "next/navigation";
 import TicketCounter from "../../../components/Products/ticketCounter";
 import EventsLayout from "../../../layouts/EventsLayout";
+import Image from "next/image";
 
 function EventPage({ params }: { params: { slug: string } }) {
   const router = useRouter();
@@ -50,9 +48,9 @@ function EventPage({ params }: { params: { slug: string } }) {
     router.push("/contactinfo");
   };
 
-  const handleLoginRoute = () => {
-    router.push("/about");
-  };
+  // const handleLoginRoute = () => {
+  //   router.push("/about");
+  // };
 
   const remainingEvents = eventData.filter(
     (event) => event.id !== parseInt(slug, 10)
@@ -60,11 +58,11 @@ function EventPage({ params }: { params: { slug: string } }) {
 
   return (
     <EventsLayout>
-      <div className="container11" onClick={handleLoginRoute}>
+      <div className="container11" >
         <div className="dets">
           <div className="neutral">
             <div>
-              <img src={eventDataById.imageSrc} alt={eventDataById.altText} />
+              <Image src={eventDataById.imageSrc} alt={eventDataById.altText} />
             </div>
             <div className="details">
               <div className="upper">

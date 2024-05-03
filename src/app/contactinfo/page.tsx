@@ -3,15 +3,16 @@ import "../../components/Styles/contactinfo.css";
 import Footer from "../../components/Footer/footer";
 import Morecontactinfo from "../morecontactinfo/page";
 import Link from "next/link";
+import Image from "next/image";
 
 const Contactinfo = () => {
   return (
     <div className="container6">
       <div className="header4">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
-        <div>
+        <div className="btn11">
           <button className="btn">X</button>
         </div>
       </div>

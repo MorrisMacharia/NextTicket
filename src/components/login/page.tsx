@@ -3,6 +3,7 @@ import "../Styles/login.css"
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import Password from "../PasswordPage/password";
+import Image from "next/image";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Login = () => {
     <div className="log">
       <div className="bar">
         <div className="logo">
-          <img src="/Logo.svg" alt="logo" />
+          <Image src="/Logo.svg" alt="logo" />
         </div>
         <div className="cancel">
           <button>X</button>

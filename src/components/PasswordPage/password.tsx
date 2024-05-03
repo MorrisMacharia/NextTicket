@@ -1,11 +1,12 @@
 import React from "react";
 import "./password.css";
+import Image from "next/image";
 const PasswordPage = () => {
   return (
     <div className="container3">
       <div className="header">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
         <div>
           <button className="btn">X</button>

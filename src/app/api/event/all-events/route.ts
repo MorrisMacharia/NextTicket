@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 // Set up route to get all events
-export async function POST(req: NextRequest, res: Response) {
+export async function GET(req: NextRequest, res: Response) {
   try {
     const prisma = new PrismaClient();
 

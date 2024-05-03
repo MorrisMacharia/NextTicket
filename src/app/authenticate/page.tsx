@@ -3,6 +3,7 @@ import "../../components/Styles/authentication.css"
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import Image from "next/image";
 
 
 
@@ -11,7 +12,7 @@ const Authenticate = () => {
     <div className="authent">
       <div className="header3">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
         <div>
           <button className="btn">X</button>

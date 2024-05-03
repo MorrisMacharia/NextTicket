@@ -3,13 +3,14 @@ import "../../components/Styles/review.css";
 import { FaCreditCard } from "react-icons/fa";
 import Morecontactinfo from "../morecontactinfo/page";
 import Footer from "../../components/Footer/footer";
+import Image from "next/image";
 
 
 const Review = () => {
   return (
     <div className="review">
       <div className="headred">
-        <img src="/Logored.svg" alt="logo" />
+        <Image src="/Logored.svg" alt="logo" />
         <div className="cancel">
           <button>X</button>
         </div>
@@ -30,7 +31,7 @@ const Review = () => {
               
               <div className="credit">
                 <input type="radio" />
-                <img src="/MPesa.png" alt="mpesa" width={18} height={18} />
+                <Image src="/MPesa.png" alt="mpesa" width={18} height={18} />
                 M-Pesa
               </div>
             </div>

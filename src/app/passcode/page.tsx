@@ -3,6 +3,7 @@ import React from "react";
 import "../../components/Styles/passcode.css";
 import CustomButton from "../../components/CustomButton";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Password = () => {
   const router = useRouter();
@@ -13,7 +14,7 @@ const Password = () => {
     <div className="container3">
       <div className="header">
         <div className="logo">
-          <img src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" />
         </div>
         <div>
           <button className="btn">X</button>
