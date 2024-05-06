@@ -9,18 +9,34 @@ import toast from "react-hot-toast";
 import Image from "next/image";
 
 const Emailsignup = () => {
+  // react hooks
   const router = useRouter();
+  // hoooks states
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
+  const [useEmail, setEmail] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const [code, setCode] = useState<number>();
+
+  // functionality
   const handleRoute = () => {
     router.push("/signup");
   };
-  const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
 
+  // this sets onclick the opposite of useEmail
+  const handleEmailOrPass = () => {
+    if (!emailError) {
+      setEmailError(true);
+    } else {
+      setEmail(!useEmail);
+    }
+  };
+
+  // handle submitting form inputs
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -31,7 +47,6 @@ const Emailsignup = () => {
     } else {
       setEmailError(false);
     }
-
     if (!formData.password) {
       toast.error("Password is required");
       setPasswordError(true);
@@ -76,6 +91,10 @@ const Emailsignup = () => {
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+
+    if (name === "code") {
+      setCode(Number(value));
+    }
     setFormData({ ...formData, [name]: value });
   };
 
@@ -117,7 +136,9 @@ const Emailsignup = () => {
           </button>
         </div>
         <div className="pass4">
-          <div className="send">Send a code via email instead</div>
+          <div className="send" onClick={handleEmailOrPass}>
+            {useEmail ? "Use Password" : " Send a code via email instead"}
+          </div>
           <div className="orr">Or</div>
           <button className="googlebtn">
             <FcGoogle />
