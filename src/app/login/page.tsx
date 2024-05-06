@@ -9,18 +9,34 @@ import toast from "react-hot-toast";
 import Image from "next/image";
 
 const Emailsignup = () => {
+  // react hooks
   const router = useRouter();
+  // hoooks states
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
+  const [useEmail, setEmail] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const [code, setCode] = useState<number>();
+
+  // functionality
   const handleRoute = () => {
     router.push("/signup");
   };
-  const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
 
+  // this sets onclick the opposite of useEmail
+  const handleEmailOrPass = () => {
+    if (!emailError) {
+      setEmailError(true);
+    } else {
+      setEmail(!useEmail);
+    }
+  };
+
+  // handle submitting form inputs
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -76,6 +92,10 @@ const Emailsignup = () => {
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+
+    if (name === "code") {
+      setCode(Number(value));
+    }
     setFormData({ ...formData, [name]: value });
   };
 
@@ -100,12 +120,14 @@ const Emailsignup = () => {
             value={formData.email}
             onChange={handleInputChange}
           />
-          <div className="e-add">Your password</div>
+          <div className="e-add">
+            {useEmail ? "Enter Code" : "Your password"}
+          </div>
           <input
             className="pasin"
-            type="password"
-            name="password"
-            value={formData.password}
+            type={useEmail ? "number" : "password"}
+            name={useEmail ? "code" : "password"}
+            value={useEmail ? code : formData.password}
             onChange={handleInputChange}
           />
           {/* <div className={passwordError ? "form-error" : "e-add"}>
@@ -117,7 +139,9 @@ const Emailsignup = () => {
           </button>
         </div>
         <div className="pass4">
-          <div className="send">Send a code via email instead</div>
+          <div className="send" onClick={handleEmailOrPass}>
+            {useEmail ? "Use Password" : " Send a code via email instead"}
+          </div>
           <div className="orr">Or</div>
           <button className="googlebtn">
             <FcGoogle />
@@ -141,11 +165,12 @@ const Emailsignup = () => {
           </button>
         </div>
       </form>
-      <div className="send">Don&apos;t have an account?</div>
-
-      <button className="signupbtn" onClick={handleRoute}>
-        Sign up
-      </button>
+      <div>
+        Don&apos;t have an account?
+        <span className="send" onClick={handleRoute}>
+          Sign up
+        </span>
+      </div>
     </div>
   );
 };
