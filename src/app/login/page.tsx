@@ -81,6 +81,7 @@ const Emailsignup = () => {
 
   return (
     <div className="container5">
+      <div className="wrapper">
       <div className="header3">
         <div className="logo">
           <Image src="/Logo.svg" alt="" width={160} height={30} />
@@ -100,17 +101,16 @@ const Emailsignup = () => {
             value={formData.email}
             onChange={handleInputChange}
           />
-          <div className="e-add">Your password</div>
+          <div className={passwordError ? "form-error" : "e-add"}>
+            {passwordError ? "Password is required" : "Your password"}
+          </div>
           <input
-            className="pasin"
             type="password"
+            placeholder="Password"
             name="password"
             value={formData.password}
             onChange={handleInputChange}
           />
-          {/* <div className={passwordError ? "form-error" : "e-add"}>
-            {passwordError ? "Password is required" : "Your password"}
-          </div> */}
 
           <button className="button3" type="submit">
             Log In
@@ -139,13 +139,14 @@ const Emailsignup = () => {
               Continue with apple
             </Link>
           </button>
-        </div>
-      </form>
       <div className="send">Don&apos;t have an account?</div>
 
       <button className="signupbtn" onClick={handleRoute}>
         Sign up
       </button>
+        </div>
+      </form>
+      </div>
     </div>
   );
 };

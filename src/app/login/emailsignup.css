@@ -1,10 +1,14 @@
 .container5 {
   width: 100%;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
 }
-form {
-  max-width: 400px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+
 }
 .form-error {
   color: red;
@@ -35,22 +39,25 @@ form {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  width:50%;
+  align-items: flex-start;
 }
 .pass3 {
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
+  align-items: flex-start;
 }
 .pass3 input {
   padding: 15px 10px;
   margin-top: 10px;
-  width: 380px;
+  width: 38.4vw;
   border-radius: 15px;
+  border-radius: 8px;
+  border: 1.6px solid var(--Neutrals-Stroke, #dedede);
 }
 .button3 {
-  width: 400px;
+  width: 39.6vw;
   margin-top: 20px;
   padding: 15px 10px;
   border-radius: 15px;
@@ -59,8 +66,9 @@ form {
   cursor: grab;
 }
 .e-add {
-  margin-right: 270px;
-  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  padding: 3% 0;
 }
 .send {
   color: blue;
@@ -78,20 +86,20 @@ form {
 }
 .googlebtn {
   margin-bottom: 25px;
-  width: 400px;
+  width: 39.4vw;
   padding: 15px 10px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
-  gap:10px;
+  gap: 10px;
 }
 .applebtn {
   display: flex;
-  width: 400px;
+  width: 39.4vw;
   padding: 15px 10px;
   border-radius: 15px;
   margin-bottom: 25px;
-  gap:10px;
+  gap: 10px;
   justify-content: center;
 }
 .pass4 {
@@ -99,10 +107,11 @@ form {
   flex-direction: column;
   align-items: center;
   margin-top: 15px;
+  width:100%;
 }
 .signupbtn {
   margin-top: 18px;
-  width: 400px;
+  width: 39.4vw;
   padding: 15px 10px;
   border-radius: 15px;
   color: black;
@@ -125,47 +134,46 @@ form {
 }
 @media (max-width: 768px) {
   .container5 {
-    padding: 0 20px; 
+    padding: 0 20px;
     width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
   }
-  .header3{
+  .header3 {
     justify-content: center;
   }
   form {
-    max-width: 90%; 
+    max-width: 90%;
   }
-.btn{
-  display: none;
-}
-.googlebtn{
-  width: auto;
-}
-.applebtn{
-  width: auto;
-}
-.signupbtn{
-  width: auto;
-}
-.button3{
-  width: auto;
-}
-  .pass3 input {
-    width: calc(100% - 20px); 
-
-  
-  .googlebtn,
-  .applebtn,
+  .btn {
+    display: none;
+  }
+  .googlebtn {
+    width: auto;
+  }
+  .applebtn {
+    width: auto;
+  }
   .signupbtn {
-    width: 90%; 
+    width: auto;
   }
+  .button3 {
+    width: auto;
+  }
+  .pass3 input {
+    width: calc(100% - 20px);
 
-  .e-add {
-    margin-right: 0; 
-    text-align: center;
+    .googlebtn,
+    .applebtn,
+    .signupbtn {
+      width: 90%;
+    }
+
+    .e-add {
+      margin-right: 0;
+      text-align: center;
+    }
   }
-}
 }
