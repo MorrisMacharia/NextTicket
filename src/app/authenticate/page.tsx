@@ -12,11 +12,11 @@ const Authenticate = () => {
     <div className="authent">
       <div className="header3">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt=""  width={160} height={30}/>
         </div>
-        <div>
+        {/* <div>
           <button className="btn">X</button>
-        </div>
+        </div> */}
       </div>
       <div className="section1">
         <div className="confirm">Confirm it’s you</div>

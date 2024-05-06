@@ -10,7 +10,7 @@ Events <BsChevronRight/> EXP Momentum LTD <BsChevronRight/>Passionate Pages Flav
 </div>
 <div className='details'>
 <div className='card1'>
-<Image src='/Event7.svg' alt='card1'/>
+<Image src='/Event7.svg' alt='card1' width={100}/>
 </div>
 <div className='details1'>
 <div className='postn1'>

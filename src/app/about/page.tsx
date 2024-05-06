@@ -21,7 +21,7 @@ const Page = () => {
       <div className="bar">
         <div className="logo">
 
-          <Image  src="/Logo.svg" alt="logo" /> 
+          <Image  src="/Logo.svg" alt="logo" width={160} height={30}/> 
           
         </div>
         <div className="cancel">

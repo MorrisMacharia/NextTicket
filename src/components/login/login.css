@@ -48,9 +48,14 @@
   padding: 15px 10px;
   border-radius: 12px;
 }
+
 .e-add{
+  /* background-color: aqua; */
   color: red;
+  text-align: center;
+  width: 100%;
 }
+
 .btn3 {
   border-radius: 15px;
   color: aliceblue;

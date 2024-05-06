@@ -62,7 +62,7 @@ function EventPage({ params }: { params: { slug: string } }) {
         <div className="dets">
           <div className="neutral">
             <div>
-              <Image src={eventDataById.imageSrc} alt={eventDataById.altText} />
+              <Image src={eventDataById.imageSrc} alt={eventDataById.altText} width={300} height={300} />
             </div>
             <div className="details">
               <div className="upper">

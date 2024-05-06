@@ -81,12 +81,18 @@ form {
   width: 400px;
   padding: 15px 10px;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  gap:10px;
 }
 .applebtn {
+  display: flex;
   width: 400px;
   padding: 15px 10px;
   border-radius: 15px;
   margin-bottom: 25px;
+  gap:10px;
+  justify-content: center;
 }
 .pass4 {
   display: flex;

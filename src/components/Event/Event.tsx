@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Event.css";
 import { MdLanguage } from "react-icons/md";
@@ -12,7 +11,7 @@ const Event = () => {
   return (
     <div className="container11">
       <div className="logo">
-        <Image src="/Logo.svg" alt="" />
+        <Image src="/Logo.svg" alt="" width={170} height={30} />
       </div>
       <div className="searchbar11">
         <input type="text" className="cityinput11" />
@@ -31,7 +30,14 @@ const Event = () => {
       <div className="dets">
         <div className="neutral">
           <div>
-            <Image src="/Event1.png" alt="card" />
+            <Image
+              src="/Event1.png"
+              alt="card"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
           </div>
           <div className="details">
             <div className="upper">

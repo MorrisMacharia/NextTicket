@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="container">
       <div className="container2">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" width="180" height="30"  />
         </div>
         <div className="wordings">
           <Link href="/organisers">
@@ -19,8 +19,8 @@ const Navbar = () => {
           <div className="create">
             <MdLanguage /> English
           </div>
-          <button type="button" className="btn">
-            <Link href="/about" className="as">
+          <button type="button" className="abtn">
+            <Link href="/login" className="as">
               Sign in
             </Link>
           </button>

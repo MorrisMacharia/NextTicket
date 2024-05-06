@@ -10,7 +10,7 @@ const Contactinfo = () => {
     <div className="container6">
       <div className="header4">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" />
+          { <Image src="/Logo.svg" alt="" width="160" height="30" /> }
         </div>
         <div className="btn11">
           <button className="btn">X</button>

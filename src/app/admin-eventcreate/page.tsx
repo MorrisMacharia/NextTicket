@@ -11,7 +11,7 @@ const Admineventcreate = () => {
   const [ticketPriceAdvance, setTicketPriceAdvance] = useState("");
   const [eventImage, setEventImage] = useState(null); // State for event image
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
     try {

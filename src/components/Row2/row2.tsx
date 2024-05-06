@@ -23,7 +23,7 @@ const Row2: React.FC<Row2Props> = ({ data }) => {
             onClick={() => handleRoute(event.id)}
           >
             <div className="choral">
-              <Image src={event.imageSrc} alt="soul" />
+              <Image src={event.imageSrc} alt="soul" width={100} height={100} />
             </div>
             <div className="title">{event.title}</div>
             <div className="day">{event.date}</div>

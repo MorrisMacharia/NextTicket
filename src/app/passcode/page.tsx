@@ -14,7 +14,7 @@ const Password = () => {
     <div className="container3">
       <div className="header">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" width={160} height={30} />
         </div>
         <div>
           <button className="btn">X</button>

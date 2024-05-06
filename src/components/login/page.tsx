@@ -15,7 +15,7 @@ const Login = () => {
     <div className="log">
       <div className="bar">
         <div className="logo">
-          <Image src="/Logo.svg" alt="logo" />
+          <Image src="/Logo.svg" alt="logo" width={170} height={30}/>
         </div>
         <div className="cancel">
           <button>X</button>
@@ -45,6 +45,7 @@ const Login = () => {
             {" "}
             <FaApple /> Continue with Apple
           </button>
+          
           <div className="sgn">
             <a href="url">sign in</a>
           </div>

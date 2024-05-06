@@ -24,11 +24,11 @@ const Organizers = () => {
     <div className="orgz">
       <div className="head12">
         <div className="vector">
-          <Image src="/Vector2.svg" alt="tick" />{" "}
-          <Image src="/Vector1.svg" alt="tick" />
+          {/* <Image src="/Vector2.svg" alt="tick" />{" "} */}
+          {/* <Image src="/Vector1.svg" alt="tick" /> */}
         </div>
         <div className="orglogo">
-          <Image src="/OrganiserL.png" alt="org" />
+          <Image src="/OrganiserL.png" alt="org" width={50} height={50} />
           <div>Pamoja Events</div>
           <IoChevronDownSharp />
           <div>
@@ -98,7 +98,7 @@ const Organizers = () => {
           <div className="specs">
             <div className="orgprofile">
               <div>
-                <Image src="/OrganiserL.png" alt="logo" />
+                <Image src="/OrganiserL.png" alt="logo" width={70} height={70} />
               </div>
               <div className="pamoja">
                 <div className="ptxt"> Pamoja Events</div>

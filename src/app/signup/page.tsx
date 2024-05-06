@@ -16,12 +16,12 @@ const Signup = () => {
     e.preventDefault();
     try {
       // Send a POST request to your backend to create a new user
-      const response = await fetch("/api/user-auth/signup", {
+      const response = await fetch("/api/user-auth/sign-up", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, firstName, lastName, password }),
+        body: JSON.stringify({ email, firstname: firstName, lastname: lastName, password, role: 'NORMAL' }),
       });
 
       if (response.ok) {
@@ -39,14 +39,14 @@ const Signup = () => {
     <div className="container4">
       <div className="header2">
         <div className="logo1">
-          <Image src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" height={160} width={30} />
         </div>
         <div>
           <button className="btn">X</button>
         </div>
       </div>
       <div className="body2">
-        <div className="name"> Enter your full name</div>
+        <div className="name"> Enter your Details</div>
         <form onSubmit={handleSubmit}>
           <div className="pass2">
             <div className="name2">Enter Email</div>

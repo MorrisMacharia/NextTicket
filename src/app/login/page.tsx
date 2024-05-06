@@ -83,7 +83,7 @@ const Emailsignup = () => {
     <div className="container5">
       <div className="header3">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" />
+          <Image src="/Logo.svg" alt="" width={160} height={30} />
         </div>
         <button className="btn">X</button>
       </div>
@@ -102,6 +102,7 @@ const Emailsignup = () => {
           />
           <div className="e-add">Your password</div>
           <input
+          className="pasin"
             type="password"
             name="password"
             value={formData.password}
@@ -140,8 +141,10 @@ const Emailsignup = () => {
           </button>
         </div>
       </form>
+      <div className="send">Don&apos;t have an account?</div>
+
       <button className="signupbtn" onClick={handleRoute}>
-        {" "}
+        
         Sign up
       </button>
     </div>

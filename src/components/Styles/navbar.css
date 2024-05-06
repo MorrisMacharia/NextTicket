@@ -5,6 +5,7 @@
 }
 .wordings {
   display: flex;
+  align-items: center;
   gap: 30px;
   cursor: pointer;
 }
@@ -42,19 +43,19 @@
   line-height: normal;
   letter-spacing: -0.8px;
 }
-.btn {
+.abtn {
   border: none;
   border-radius: 12px;
   color: aliceblue;
   background-color: #b69797;
   width: 90px;
+  height: 40px;
   cursor: pointer;
   transition: all ease-in-out 0.5s;
 }
-.btn:hover {
-  background-color: black;
-  color:#ebebeb ;
-  cursor: gran;
+.abtn:hover {
+  color:#ebdfdf ;
+  cursor: pointer;
   transform: scale(1.1);
 }
 .search-icon {

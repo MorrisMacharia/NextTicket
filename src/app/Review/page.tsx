@@ -10,7 +10,7 @@ const Review = () => {
   return (
     <div className="review">
       <div className="headred">
-        <Image src="/Logored.svg" alt="logo" />
+        <Image src="/Logored.svg" alt="logo" width={170} height={30} />
         <div className="cancel">
           <button>X</button>
         </div>

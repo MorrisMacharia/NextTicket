@@ -21,6 +21,8 @@ const Products = () => {
               <div className="choral">
                 <Image
                   src={event.imageSrc}
+                  // width={100}
+                  // height={100}
                   alt={event.altText}
                   fill
                   className="card-image"
