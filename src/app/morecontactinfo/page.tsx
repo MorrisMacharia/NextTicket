@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/Styles/morecont.css";
+import "./morecont.css";
 import Image from "next/image";
 const Morecontactinfo = () => {
   return (

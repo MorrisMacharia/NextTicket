@@ -11,7 +11,6 @@ export async function GET(req: NextRequest, res: Response) {
         description: true,
         date: true,
         location: true,
-        price: true,
         image: true,
         createdBy: {
           select: {

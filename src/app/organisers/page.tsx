@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../components/Styles/organizers.css";
+import "./organizers.css";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { CiBellOn } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";

@@ -7,8 +7,16 @@ import { splitToken } from "../../../../helpers/splitToken";
 
 export async function POST(req: NextRequest) {
   try {
-    const { title, description, date, location, price, image } =
-      await req.json();
+    const {
+      title,
+      description,
+      date,
+      location,
+      earlyBirdTicketPrice,
+      gateTicketPrice,
+      advanceTicketPrice,
+      image,
+    } = await req.json();
 
     let token: string | string[] | undefined = req.headers.getSetCookie();
 
@@ -79,7 +87,9 @@ export async function POST(req: NextRequest) {
         description,
         date,
         location,
-        price,
+        earlyBirdTicketPrice,
+        gateTicketPrice,
+        advanceTicketPrice,
         image,
         createdBy: {
           connect: {

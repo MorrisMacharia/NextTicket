@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/Styles/Row2.css";
+import "./Row2.css";
 import EventData from "../../types/event";
 import { useRouter } from "next/navigation";
 import Image from "next/image";

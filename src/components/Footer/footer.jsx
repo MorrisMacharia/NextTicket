@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/footer.css";
+import "./footer.css";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { RxLinkedinLogo } from "react-icons/rx";
@@ -39,13 +39,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copyright">© 2024 TicketWave. All rights reserved. Made in Nairobi.</div>
+      <div className="copyright">
+        © 2024 TicketWave. All rights reserved. Made in Nairobi.
+      </div>
     </div>
   );
 };
 
 export default Footer;
-
-
-
-

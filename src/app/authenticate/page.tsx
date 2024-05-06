@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/Styles/authentication.css"
+import "./authentication.css"
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "../../../components/Styles/Event.css";
+import "../Event.css";
 import { GrFavorite } from "react-icons/gr";
 import { CiShare2 } from "react-icons/ci";
 import Row2 from "../../../components/Row2/row2";

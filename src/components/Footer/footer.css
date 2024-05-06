@@ -1,11 +1,4 @@
-/* .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 40px 10%;
-  align-items: center;
-  background-color: rgba(128, 128, 128, 0.151);
-} */
+
 .information {
   display: flex;
   gap: 100px;

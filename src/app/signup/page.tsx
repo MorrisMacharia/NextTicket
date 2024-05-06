@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import "../../components/Styles/signup.css"
+import "./signup.css";
 import Image from "next/image";
 
 const Signup = () => {
@@ -21,7 +21,13 @@ const Signup = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, firstname: firstName, lastname: lastName, password, role: 'NORMAL' }),
+        body: JSON.stringify({
+          email,
+          firstname: firstName,
+          lastname: lastName,
+          password,
+          role: "NORMAL",
+        }),
       });
 
       if (response.ok) {

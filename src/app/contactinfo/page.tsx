@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/Styles/contactinfo.css";
+import "./contactinfo.css";
 import Footer from "../../components/Footer/footer";
 import Morecontactinfo from "../morecontactinfo/page";
 import Link from "next/link";

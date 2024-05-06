@@ -1,10 +1,9 @@
 import React from "react";
-import "../../components/Styles/review.css";
+import "./review.css";
 import { FaCreditCard } from "react-icons/fa";
 import Morecontactinfo from "../morecontactinfo/page";
 import Footer from "../../components/Footer/footer";
 import Image from "next/image";
-
 
 const Review = () => {
   return (
@@ -28,7 +27,7 @@ const Review = () => {
               <div className="credit">
                 <input type="radio" /> <FaCreditCard /> Card
               </div>
-              
+
               <div className="credit">
                 <input type="radio" />
                 <Image src="/MPesa.png" alt="mpesa" width={18} height={18} />

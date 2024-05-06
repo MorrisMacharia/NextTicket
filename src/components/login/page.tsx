@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/login.css"
+import "./login.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import Password from "../PasswordPage/password";
@@ -15,7 +15,7 @@ const Login = () => {
     <div className="log">
       <div className="bar">
         <div className="logo">
-          <Image src="/Logo.svg" alt="logo" width={170} height={30}/>
+          <Image src="/Logo.svg" alt="logo" width={170} height={30} />
         </div>
         <div className="cancel">
           <button>X</button>
@@ -45,7 +45,7 @@ const Login = () => {
             {" "}
             <FaApple /> Continue with Apple
           </button>
-          
+
           <div className="sgn">
             <a href="url">sign in</a>
           </div>

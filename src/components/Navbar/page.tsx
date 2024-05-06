@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/navbar.css";
+import "./navbar.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="container">
       <div className="container2">
         <div className="logo">
-          <Image src="/Logo.svg" alt="" width="180" height="30"  />
+          <Image src="/Logo.svg" alt="" width="180" height="30" />
         </div>
         <div className="wordings">
           <Link href="/organisers">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "../../components/Styles/emailsignup.css";
+import "./emailsignup.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
 import Link from "next/link";
@@ -55,13 +55,13 @@ const Emailsignup = () => {
           if (!response.ok) {
             throw new Error("Login failed");
           }
-          const data = await response.json();
-          console.log(data);
+          const { data: userData, token } = await response.json();
+          console.log(userData);
           // Save user data and token to local storage
-          localStorage.setItem("userData", JSON.stringify(data.data));
-          localStorage.setItem("token", data.token);
+          localStorage.setItem("userData", JSON.stringify(userData));
+          localStorage.setItem("token", token);
           router.push("/");
-          return data;
+          return await response.json();
         })
         .catch((error) => {
           throw new Error("Login failed");
@@ -102,7 +102,7 @@ const Emailsignup = () => {
           />
           <div className="e-add">Your password</div>
           <input
-          className="pasin"
+            className="pasin"
             type="password"
             name="password"
             value={formData.password}
@@ -144,7 +144,6 @@ const Emailsignup = () => {
       <div className="send">Don&apos;t have an account?</div>
 
       <button className="signupbtn" onClick={handleRoute}>
-        
         Sign up
       </button>
     </div>

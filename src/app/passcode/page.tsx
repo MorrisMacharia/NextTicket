@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "../../components/Styles/passcode.css";
+import "./passcode.css";
 import CustomButton from "../../components/CustomButton";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -24,7 +24,11 @@ const Password = () => {
         <div className="create"> Create your password</div>
         <div className="pass">
           <div className="create2">Create a password</div>
-          <input type="Password" placeholder="Password " className="passcode1" />
+          <input
+            type="Password"
+            placeholder="Password "
+            className="passcode1"
+          />
 
           <div>
             <CustomButton

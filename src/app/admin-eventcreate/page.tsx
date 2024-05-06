@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import "../../components/Styles/admin-eventcreate.css";
+import "./admin-eventcreate.css";
 
 const Admineventcreate = () => {
   const [eventName, setEventName] = useState("");
@@ -24,7 +24,7 @@ const Admineventcreate = () => {
       formData.append("ticketPriceAdvance", ticketPriceAdvance);
       formData.append("eventImage", eventImage); // Append image to FormData
 
-      const response = await fetch("/api/create-event", {
+      const response = await fetch("/api/admin/create-event", {
         method: "POST",
         body: formData, // Send FormData instead of JSON string
       });
