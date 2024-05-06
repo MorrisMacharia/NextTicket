@@ -47,7 +47,6 @@ const Emailsignup = () => {
     } else {
       setEmailError(false);
     }
-
     if (!formData.password) {
       toast.error("Password is required");
       setPasswordError(true);
