@@ -1,9 +1,11 @@
 import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
 import config from "../../../../config/config";
+import formidable from "formidable";
 import prisma from "../../../../helpers/prisma";
 import { UserRole } from "@prisma/client";
 import { splitToken } from "../../../../helpers/splitToken";
+import { upload } from "../../../../helpers/cloudinary";
 
 export async function POST(req: NextRequest) {
   try {
@@ -15,8 +17,38 @@ export async function POST(req: NextRequest) {
       earlyBirdTicketPrice,
       gateTicketPrice,
       advanceTicketPrice,
-      image,
+      // image,
     } = await req.json();
+
+    // Handle Image Upload
+    const form = new formidable.IncomingForm();
+
+    let image: any;
+
+    const formParsePromise = new Promise<void>((resolve, reject) => {
+      form.parse(req.bodyReader.read(), async (err, fields, files) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        if (files.image) {
+          // Check if the 'image' file field exists
+          try {
+            const uploadResult = await upload(files.image.filepath);
+            image = uploadResult.secure_url; // Get the uploaded image URL
+            resolve();
+          } catch (err) {
+            reject(err);
+            return;
+          }
+        } else {
+          resolve(); // Resolve if there's no image
+        }
+      });
+    });
+
+    await formParsePromise;
 
     let token: string | string[] | undefined = req.headers.getSetCookie();
 

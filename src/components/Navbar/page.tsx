@@ -1,10 +1,32 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import { MdLanguage } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
+
 const Navbar = () => {
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    const tokenFromLocalStorage = localStorage.getItem("token");
+    if (tokenFromLocalStorage) {
+      setToken(tokenFromLocalStorage);
+    }
+    console.log(tokenFromLocalStorage);
+  }, []);
+
+  const handleLogout = () => {
+    // Clear user session data (e.g., remove token from localStorage)
+    localStorage.removeItem("token");
+    localStorage.removeItem("userData");
+    // Update the isLoggedIn state to false
+    setToken("");
+    // Redirect to the login page or any other relevant page
+    // For demonstration purposes, let's redirect to the login page
+    window.location.href = "/login";
+  };
   return (
     <div className="container">
       <div className="container2">
@@ -20,9 +42,11 @@ const Navbar = () => {
             <MdLanguage /> English
           </div>
           <button type="button" className="abtn">
-            <Link href="/login" className="as">
-              Sign in
-            </Link>
+            {token === "" ? (
+              <Link href="/login">Sign in</Link>
+            ) : (
+              <div onClick={handleLogout}>Sign out</div>
+            )}
           </button>
         </div>
       </div>

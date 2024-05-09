@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// Corrected Login component
+import React, { useEffect, useState } from "react";
 import "./login.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
@@ -7,10 +8,24 @@ import Image from "next/image";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Add state for login status
+
   const handleEnterPass = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleLogout = () => {
+    // Clear token from localStorage and update login status
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+  };
+
+  useEffect(() => {
+    // Check if user is logged in (e.g., token exists in localStorage)
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
+
   return (
     <div className="log">
       <div className="bar">
@@ -37,6 +52,17 @@ const Login = () => {
           </button>
           {isOpen && <Password />}
 
+          {/* Update condition to display either logout button or sign in link */}
+          {isLoggedIn ? (
+            <button className="logout-btn" onClick={handleLogout}>
+              Log Out
+            </button>
+          ) : (
+            <div className="sgn">
+              <a href="url">Sign In</a>
+            </div>
+          )}
+
           <button type="button" className="btn4">
             {" "}
             <FcGoogle /> Continue with Google
@@ -45,10 +71,6 @@ const Login = () => {
             {" "}
             <FaApple /> Continue with Apple
           </button>
-
-          <div className="sgn">
-            <a href="url">sign in</a>
-          </div>
         </div>
       </div>
     </div>

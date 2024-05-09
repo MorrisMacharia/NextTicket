@@ -11,6 +11,9 @@
 .div1 {
   padding: 10px 20%;
 }
+.error{
+  color: red;
+}
 .where {
   color: var(--Neutrals-Dark, #040404);
   font-feature-settings: "clig" off, "liga" off;
