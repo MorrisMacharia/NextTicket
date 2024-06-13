@@ -32,8 +32,8 @@ model Event {
   earlyBirdTicketPrice String
   gateTicketPrice      String
   advanceTicketPrice   String
-  description          String
-  image                String
+  description          String?
+  image                String?
   createdBy            User     @relation(fields: [createdById], references: [id])
   createdById          String   @db.ObjectId
   createdAt            DateTime @default(now())

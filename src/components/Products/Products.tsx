@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./Products.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,10 +7,29 @@ import eventData from "./eventsData";
 import EventData from "../../types/event";
 
 const Products = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Add state for login status
+
+  useEffect(() => {
+    // Check if user is logged in (e.g., token exists in localStorage)
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
+
+  const handleLogout = () => {
+    // Clear user session data (e.g., remove token from localStorage)
+    localStorage.removeItem("token");
+    localStorage.removeItem("userData");
+    // Update the isLoggedIn state to false
+    setIsLoggedIn(false);
+    // Redirect to the login page or any other relevant page
+    // For demonstration purposes, let's redirect to the login page
+    window.location.href = "/login";
+  };
+
   return (
     <div className="body1">
       <div className="upComing">
-        <div className="events">UpComing Events</div>
+        <div className="events">Upcoming Events</div>
         <div className="see">
           <a href="url">See All</a>
         </div>
@@ -33,6 +53,7 @@ const Products = () => {
                   }}
                 />
               </div>
+
               <div className="text-wrapper">
                 <div className="title">{event.title}</div>
                 <div className="day">{event.date}</div>
@@ -49,6 +70,12 @@ const Products = () => {
           Show More
         </button>
       </div>
+       {/* Display logout button if user is logged in */}
+       {isLoggedIn && (
+        <button className="logout-btn" onClick={handleLogout}>
+          Log Out
+        </button>
+      )}
     </div>
   );
 };

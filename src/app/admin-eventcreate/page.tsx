@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import "./admin-eventcreate.css";
+import toast from "react-hot-toast";
 
 const Admineventcreate = () => {
   const [eventName, setEventName] = useState("");
@@ -11,7 +12,7 @@ const Admineventcreate = () => {
   const [ticketPriceAdvance, setTicketPriceAdvance] = useState("");
   const [eventImage, setEventImage] = useState(null); // State for event image
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async  (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
@@ -26,12 +27,15 @@ const Admineventcreate = () => {
 
       const response = await fetch("/api/admin/create-event", {
         method: "POST",
-        body: formData, // Send FormData instead of JSON string
+        
+        body: formData
       });
-
+      console.log(response)
       if (response.ok) {
+        toast.success("Event created successfully")
         console.log("Event created successfully");
       } else {
+        toast.error("Failed to create event")
         console.error("Failed to create event");
       }
     } catch (error) {
