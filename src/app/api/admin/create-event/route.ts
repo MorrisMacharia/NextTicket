@@ -1,54 +1,21 @@
 import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
 import config from "../../../../config/config";
-import formidable from "formidable";
 import prisma from "../../../../helpers/prisma";
 import { UserRole } from "@prisma/client";
 import { splitToken } from "../../../../helpers/splitToken";
-import { upload } from "../../../../helpers/cloudinary";
 
 export async function POST(req: NextRequest) {
   try {
-    const {
-      title,
-      description,
-      date,
-      location,
-      earlyBirdTicketPrice,
-      gateTicketPrice,
-      advanceTicketPrice,
-      // image,
-    } = await req.json();
-
-    // Handle Image Upload
-    const form = new formidable.IncomingForm();
-
-    let image: any;
-
-    const formParsePromise = new Promise<void>((resolve, reject) => {
-      form.parse(req.bodyReader.read(), async (err, fields, files) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-
-        if (files.image) {
-          // Check if the 'image' file field exists
-          try {
-            const uploadResult = await upload(files.image.filepath);
-            image = uploadResult.secure_url; // Get the uploaded image URL
-            resolve();
-          } catch (err) {
-            reject(err);
-            return;
-          }
-        } else {
-          resolve(); // Resolve if there's no image
-        }
-      });
-    });
-
-    await formParsePromise;
+    const formData = await req.formData();
+    const title = formData.get("eventName") as string;
+    const description = ""; // Add description if available
+    const date = formData.get("eventDate") as string;
+    const location = formData.get("eventLocation") as string;
+    const earlyBirdTicketPrice = formData.get("ticketPriceEarlyBird") as string;
+    const gateTicketPrice = formData.get("ticketPriceGate") as string;
+    const advanceTicketPrice = formData.get("ticketPriceAdvance") as string;
+    const image = formData.get("eventImage") as string;
 
     let token: string | string[] | undefined = req.headers.getSetCookie();
 
@@ -68,7 +35,7 @@ export async function POST(req: NextRequest) {
 
     const payload = decoded as { id: string; email: string; role: UserRole };
 
-    //find if user exists
+    // Find if user exists and is admin
     const user = await prisma.user.findUnique({
       where: {
         email: payload.email,
@@ -78,7 +45,7 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    if (user && user.role !== UserRole.ADMIN) {
+    if (!user || user.role !== UserRole.ADMIN) {
       return new NextResponse(
         JSON.stringify({
           success: false,
@@ -112,7 +79,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    //Admin to create event
+    // Create event
     let newEvent = await prisma.event.create({
       data: {
         title,

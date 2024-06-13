@@ -87,6 +87,14 @@ border-radius: 15px;
   background-color: #0056b3;
 }
 
+.errorInput {
+  border-color: red; 
+  color: red; 
+}
+.errorInput::placeholder{
+color: red;
+}
+
 .error {
   color: red;
   font-size: 14px;

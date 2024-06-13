@@ -27,18 +27,8 @@ const Admineventcreate = () => {
 
       const response = await fetch("/api/admin/create-event", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          eventName,
-          eventDate,
-          eventLocation,
-          ticketPriceEarlyBird,
-          ticketPriceGate,
-          ticketPriceAdvance,
-          eventImage
-        })
+        
+        body: formData
       });
       console.log(response)
       if (response.ok) {

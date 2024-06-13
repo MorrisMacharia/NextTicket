@@ -1,8 +1,8 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import "./signup.css";
 import Image from "next/image";
+import "./signup.css";
 
 const Signup = () => {
   const router = useRouter();
@@ -59,23 +59,23 @@ const Signup = () => {
             <input
               type="email"
               placeholder="Email"
-              className="password"
+              className={error ? "errorInput" : "password"} 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <div className="name2">First name</div>
             <input
               type="text"
-              placeholder="First name "
-              className="password"
+              placeholder="First name"
+              className={error ? "errorInput" : "password"} 
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
             <div className="name2">Last name</div>
             <input
               type="text"
-              placeholder="Last name "
-              className="password"
+              placeholder="Last name"
+              className={error ? "errorInput" : "password"} 
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
@@ -83,7 +83,7 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Password"
-              className="password"
+              className={error ? "errorInput" : "password"} 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
