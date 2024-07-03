@@ -1,115 +1,83 @@
-import jwt from "jsonwebtoken";
-import { NextRequest, NextResponse } from "next/server";
-import config from "../../../../config/config";
-import prisma from "../../../../helpers/prisma";
-import { UserRole } from "@prisma/client";
-import { splitToken } from "../../../../helpers/splitToken";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { MongoClient } from 'mongodb';
+import formidable from 'formidable'; // for handling multipart form data (image upload)
+import { promises as fs } from 'fs'; // for file system operations
 
-export async function POST(req: NextRequest) {
+const uri = "mongodb://localhost:27017"; // Database connection string (replace with yours)
+const uploadDir = '/public/uploads'; // Directory to store uploaded images (replace with your path)
+
+async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
+
   try {
-    const formData = await req.formData();
-    const title = formData.get("eventName") as string;
-    const description = ""; // Add description if available
-    const date = formData.get("eventDate") as string;
-    const location = formData.get("eventLocation") as string;
-    const earlyBirdTicketPrice = formData.get("ticketPriceEarlyBird") as string;
-    const gateTicketPrice = formData.get("ticketPriceGate") as string;
-    const advanceTicketPrice = formData.get("ticketPriceAdvance") as string;
-    const image = formData.get("eventImage") as string;
+    // Connect to the database
+    const client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    const database = client.db("your_database_name");
+    const events = database.collection("events");
 
-    let token: string | string[] | undefined = req.headers.getSetCookie();
+    const form = new formidable.IncomingForm({
+      multiples: false, // Allow only one image upload
+      uploadDir, // Set the upload directory
+      keepExtensions: true, // Keep original file extensions
+    });
 
-    if (Array.isArray(token)) {
-      token = token[0];
-    }
-
-    if (!token) {
-      return new NextResponse("No token, authorization denied", {
-        status: 401,
+    // Parse the form data with image upload handling
+    const { fields, files } = await new Promise((resolve, reject) => {
+      form.parse(req, (err, fields, files) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve({ fields, files });
+        }
       });
-    }
-
-    let loggedToken = splitToken(token);
-
-    const decoded = jwt.verify(loggedToken, config.JWT_SECRET);
-
-    const payload = decoded as { id: string; email: string; role: UserRole };
-
-    // Find if user exists and is admin
-    const user = await prisma.user.findUnique({
-      where: {
-        email: payload.email,
-      },
-      select: {
-        role: true,
-      },
     });
 
-    if (!user || user.role !== UserRole.ADMIN) {
-      return new NextResponse(
-        JSON.stringify({
-          success: false,
-          message: "Not authorized to create event",
-        }),
-        {
-          status: 400,
-        }
-      );
+    // Extract event data from form fields
+    const { eventName, eventDate, eventLocation, ticketPriceEarlyBird, ticketPriceGate, ticketPriceAdvance } = fields;
+
+    // Validation (optional, can be done on frontend as well)
+    if (!eventName || !eventDate || !eventLocation || !ticketPriceEarlyBird || !ticketPriceGate || !ticketPriceAdvance) {
+      return res.status(400).json({ message: "Missing required fields" });
     }
 
-    const eventExists = await prisma.event.findUnique({
-      where: {
-        title,
-      },
-      select: {
-        title: true,
-        description: true,
-      },
-    });
+    // Handle image upload results
+    let eventImage = '';
+    if (files.eventImage) {
+      const oldPath = files.eventImage.filepath;
+      const newPath = `${uploadDir}/${files.eventImage.originalFilename}`;
 
-    if (eventExists) {
-      return new NextResponse(
-        JSON.stringify({
-          success: false,
-          message: "Event already exists",
-        }),
-        {
-          status: 400,
-        }
-      );
+      // Move uploaded file to the designated directory
+      await fs.rename(oldPath, newPath);
+
+      // Generate a relative or absolute URL for the image (based on your setup)
+      eventImage = newPath.replace(/\\/g, '/'); // Replace backslashes for consistency
     }
 
-    // Create event
-    let newEvent = await prisma.event.create({
-      data: {
-        title,
-        description,
-        date,
-        location,
-        earlyBirdTicketPrice,
-        gateTicketPrice,
-        advanceTicketPrice,
-        image,
-        createdBy: {
-          connect: {
-            id: payload.id,
-          },
-        },
-      },
-    });
+    // Create a new event document
+    const newEvent = {
+      eventName,
+      eventDate,
+      eventLocation,
+      ticketPriceEarlyBird,
+      ticketPriceGate,
+      ticketPriceAdvance,
+      eventImage,
+    };
 
-    return new NextResponse(
-      JSON.stringify({
-        success: true,
-        data: newEvent,
-        message: "Event created successfully",
-      }),
-      {
-        status: 200,
-      }
-    );
-  } catch (err) {
-    console.error(err);
-    return new NextResponse(JSON.stringify(err));
+    // Insert the event into the database
+    const result = await events.insertOne(newEvent);
+
+    // Respond with success message or created event details
+    res.status(201).json({ message: "Event created successfully", event: result.ops[0] });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to create event" });
+  } finally {
+    await client.close();
   }
 }
+
+export default handler;
