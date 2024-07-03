@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient } from 'mongodb';
-import formidable from 'formidable'; // for handling multipart form data (image upload)
+import formidable, { Fields, Files, File } from 'formidable'; // Import types from formidable
 import { promises as fs } from 'fs'; // for file system operations
 
-const uri = "mongodb://localhost:27017"; // Database connection string (replace with yours)
+const uri = "mongodb+srv://mmmchiuri:dLiQkj8Kl4gZGNZf@morris.qmsao5k.mongodb.net/"; // Database connection string (replace with yours)
 const uploadDir = '/public/uploads'; // Directory to store uploaded images (replace with your path)
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -11,9 +11,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
+  let client: MongoClient | null = null;
+
   try {
     // Connect to the database
-    const client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    client = new MongoClient(uri);
+    await client.connect();
     const database = client.db("your_database_name");
     const events = database.collection("events");
 
@@ -24,7 +27,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     });
 
     // Parse the form data with image upload handling
-    const { fields, files } = await new Promise((resolve, reject) => {
+    const { fields, files }: { fields: Fields; files: Files } = await new Promise((resolve, reject) => {
       form.parse(req, (err, fields, files) => {
         if (err) {
           reject(err);
@@ -44,9 +47,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     // Handle image upload results
     let eventImage = '';
-    if (files.eventImage) {
-      const oldPath = files.eventImage.filepath;
-      const newPath = `${uploadDir}/${files.eventImage.originalFilename}`;
+    const eventImageFile = files.eventImage as unknown as File;
+    if (eventImageFile) {
+      const oldPath = eventImageFile.filepath;
+      const newPath = `${uploadDir}/${eventImageFile.originalFilename}`;
 
       // Move uploaded file to the designated directory
       await fs.rename(oldPath, newPath);
@@ -69,14 +73,19 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     // Insert the event into the database
     const result = await events.insertOne(newEvent);
 
+    // Fetch the inserted event
+    const insertedEvent = await events.findOne({ _id: result.insertedId });
+
     // Respond with success message or created event details
-    res.status(201).json({ message: "Event created successfully", event: result.ops[0] });
+    res.status(201).json({ message: "Event created successfully", event: insertedEvent });
 
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to create event" });
   } finally {
-    await client.close();
+    if (client) {
+      await client.close();
+    }
   }
 }
 
