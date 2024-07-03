@@ -1,10 +1,9 @@
 .container11 {
-  width: auto;
   display: flex;
-  flex-direction: column;
+  width: auto;
   height: auto;
-  gap: 50px;
-  margin: 4% 0;
+  flex-direction: column;
+  align-items: center;
 }
 .btn {
   display: flex;
@@ -31,6 +30,9 @@
   align-items: center;
   align-self: stretch;
 }
+.dets{
+  /* background-color: #34c759; */
+}
 .logo11 {
   display: flex;
   align-items: center;
@@ -50,9 +52,31 @@
 }
 .neutral {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  padding: 40px 0px 120px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: flex-start;
+  /* background-color: #34c759; */
 }
+
+
+.secT{
+  display: flex;
+  justify-content: space-between;
+width: auto;
+padding: 0px 120px;
+/* flex-direction: column; */
+align-items: flex-start;
+gap: 200px;
+}
+.tickinfo{
+  display: flex;
+align-items: flex-start;
+gap: 56px;
+align-self: stretch;
+}
+
 .upper {
   display: flex;
   flex-direction: column;
@@ -107,8 +131,11 @@
 }
 .details {
   display: flex;
+  padding-bottom: 40px;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 56px;
+  flex: 1 0 0;
 }
 .det2 {
   display: flex;
@@ -200,23 +227,42 @@
 .bott {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
 }
 .bott1 {
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 16px;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+color: #5C5C5C;
+font-feature-settings: 'clig' off, 'liga' off;
+text-overflow: ellipsis;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 .exp {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 .org {
+  display: flex;
+  align-items: center;
   color: var(--Neutrals-Dark, #040404);
-  font-size: 15px;
-
-  font-weight: 500;
-  line-height: normal;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 .circle {
   border-radius: 32px;
@@ -235,12 +281,44 @@
   line-height: normal;
 }
 .follow {
-  border-radius: 12px;
-  border: 1px solid var(--Neutrals-Dark, #040404);
   display: flex;
+  padding: 20px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  border-radius: 12px;
+border: 1px solid var(--Neutrals-Dark, #040404);
+}
+.similar{
+
+  display: flex;
+  width: 1512px;
+  padding: 0px 120px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+}
+.col{
+  display: flex;
+align-items: flex-start;
+justify-content: space-between;
+/* gap: 20px; */
+align-self: stretch;
+}
+.simevents{
+  color: #5C5C5C;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: "DM Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 28.8px */
+letter-spacing: -0.48px;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+
 }
 @media screen and (max-width: 768px) {
   .container11 {
