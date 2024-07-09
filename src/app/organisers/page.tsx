@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { IoChevronDownSharp } from "react-icons/io5";
@@ -12,11 +12,16 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaCaretUp } from "react-icons/fa";
 import CustomButton from "../../components/CustomButton";
 import Header from "../../components/Header";
-import "./organizers.css"
+import "./organizers.css";
 
+// Custom type definition for window with ethereum property
+interface CustomWindow extends Window {
+  ethereum?: any; // ethereum property may not be present on all browsers, so use any
+}
 
 const Organizers: React.FC = () => {
   const router = useRouter();
+  const [walletAddress, setWalletAddress] = useState("");
 
   // Function to handle navigation
   const handleRoute = () => {
@@ -29,52 +34,74 @@ const Organizers: React.FC = () => {
     return 0; // Placeholder for demonstration
   };
 
+  // Function to connect wallet
+  const connectWallet = async () => {
+    const customWindow = window as CustomWindow;
+    if (customWindow.ethereum) {
+      try {
+        const accounts = await customWindow.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        setWalletAddress(accounts[0]);
+        console.log("Wallet connected:", accounts[0]);
+      } catch (error) {
+        console.error("Error connecting wallet:", error);
+      }
+    } else {
+      alert("Please install MetaMask to use this feature.");
+    }
+  };
+
   // Placeholder data for revenue calculation
   const revenue = calculateRevenue();
 
   return (
-    <div className='orgz'>
-      <div className='head12'>
-        <div className='vector'>
+    <div className="orgz">
+      <div className="head12">
+        <div className="vector">
           {/* <Image src="/Vector2.svg" alt="tick" /> */}
           {/* <Image src="/Vector1.svg" alt="tick" /> */}
         </div>
-        <div className='orglogo'>
+        <div className="orglogo">
           <Image src="/OrganiserL.png" alt="org" width={50} height={50} />
           <div>Pamoja Events</div>
           <IoChevronDownSharp />
           <div>
-            <button type="button" className='bell'>
+            <button type="button" className="bell">
               <CiBellOn />
             </button>
           </div>
-          <div className='user'>
+          <div className="user">
             <CiUser />
           </div>
         </div>
       </div>
-      <div className='orgbody'>
-        <div className='sidebar'>
-          <div className='content'>
-            <div className='sbar'>
+      <div className="orgbody">
+        <div className="sidebar">
+          <div className="content">
+            <div className="sbar">
               <div>
                 <BsHouse />
               </div>
               <div className="dash">Dashboard</div>
             </div>
-            <div className='sbar'>
+            <div className="sbar">
               <div>
                 <MdOutlineCalendarMonth />
               </div>
               <div className="dash">Events</div>
             </div>
-            <div className='sbar'>
+            <div
+              className="sbar"
+              onClick={connectWallet}
+              style={{ cursor: "pointer" }}
+            >
               <div>
                 <LuWallet />
               </div>
               <div className="dash">Wallet</div>
             </div>
-            <div className='sbar'>
+            <div className="sbar">
               <div>
                 <IoSettingsOutline />
               </div>
@@ -82,8 +109,8 @@ const Organizers: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className='orgdets'>
-          <div className='welcome'>
+        <div className="orgdets">
+          <div className="welcome">
             <Header fontSize="40px" fontWeight={500}>
               Welcome, John
             </Header>
@@ -101,54 +128,56 @@ const Organizers: React.FC = () => {
               </CustomButton>
             </div>
           </div>
-          <div className='specs'>
-            <div className='orgprofile'>
+          <div className="specs">
+            <div className="orgprofile">
               <div>
-                <Image src="/OrganiserL.png" alt="logo" width={70} height={70} />
+                <Image
+                  src="/OrganiserL.png"
+                  alt="logo"
+                  width={70}
+                  height={70}
+                />
               </div>
-              <div className='pamoja'>
-                <div className='ptxt'> Pamoja Events</div>
-                <div className='plink'>View organiser profile</div>
+              <div className="pamoja">
+                <div className="ptxt"> Pamoja Events</div>
+                <div className="plink">View organiser profile</div>
               </div>
             </div>
-            <div className='period'>
-              <div className='dropdown'>
+            <div className="period">
+              <div className="dropdown">
                 In the last 28 Days
                 <select></select>
               </div>
             </div>
-            <div className='rev11'>
-              <div className='rev'>
-                <div className='rev12'>Revenue</div>
-                <div className='rev13'>KES {revenue}</div>
+            <div className="rev11">
+              <div className="rev">
+                <div className="rev12">Revenue</div>
+                <div className="rev13">KES {revenue}</div>
               </div>
-              <div className='perc'>
+              <div className="perc">
                 <div>
                   <FaCaretUp /> vs previous 28 days
                 </div>
               </div>
             </div>
-
-
-
-          <div className='gross'>
-            <div className='sales'>
-              <div className='sal'>Gross Sales</div>
-              <div className='saldig'>0</div>
+            <div className="gross">
+              <div className="sales">
+                <div className="sal">Gross Sales</div>
+                <div className="saldig">0</div>
+              </div>
+              <div className="sales">
+                <div className="sal">Tickets Sold</div>
+                <div className="saldig">0</div>
+              </div>
+              <div className="sales">
+                <div className="sal">Page Views</div>
+                <div className="saldig">0</div>
+              </div>
+              <div className="sales">
+                <div className="sal">Followers</div>
+                <div className="saldig">0</div>
+              </div>
             </div>
-            <div className='sales'>
-              <div className='sal'>Tickets Sold</div>
-              <div className='saldig'>0</div>
-            </div>
-            <div className='sales'>
-              <div className='sal'>Page Views</div>
-              <div className='saldig'>0</div>
-            </div>
-            <div className='sales'>
-              <div className='sal'>Followers</div>
-              <div className='saldig'>0</div>
-            </div>
-          </div>
           </div>
         </div>
       </div>

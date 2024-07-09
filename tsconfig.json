@@ -16,6 +16,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "types": ["next", "next/types", "next/types/global", "formidable"],
     "plugins": [
       {
         "name": "next"

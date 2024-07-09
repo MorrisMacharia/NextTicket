@@ -9,7 +9,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 20px;
+  flex: 1 0 0;
 }
 
 .title {
